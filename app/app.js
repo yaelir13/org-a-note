@@ -1,4 +1,4 @@
-var app = angular.module("orgANote", ["ngRoute"]);
+var app = angular.module("orgANoteApp", ["ngRoute"]);
 
 app.config(function($routeProvider) {
     $routeProvider

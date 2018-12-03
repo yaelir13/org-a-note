@@ -22,15 +22,16 @@
             </li>
         </ul>
         <ul class="navbar-nav ml-auto">
-                <li class="nav-item" ng-hide="isUserLoggedIn()">
-                    <a class="nav-link" href="#!/login">Login</a>
-                </li>
-                <li class="nav-item" ng-hide="isUserLoggedIn()">
-                    <a class="nav-link" href="#">Sign Up</a>
-                </li>
-                <li class="nav-item" ng-show="isUserLoggedIn()">
-                    <a class="nav-link" href="#" ng-click="logout()">Logout</a>
-                </li>
-            </ul>
+            <li class="nav-item" ng-hide="isUserLoggedIn()">
+                <a class="nav-link" data-toggle="modal" data-target="#modelId" href="#">Login</a>
+            </li>
+            <li class="nav-item" ng-hide="isUserLoggedIn()">
+                <a class="nav-link" href="#">Sign Up</a>
+            </li>
+            <li class="nav-item" ng-show="isUserLoggedIn()">
+                <a class="nav-link" href="#" ng-click="logout()">Logout</a>
+            </li>
+        </ul>
     </div>
 </nav>
+<login-modal></login-modal>

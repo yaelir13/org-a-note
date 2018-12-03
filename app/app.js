@@ -6,7 +6,7 @@ app.config(function($routeProvider) {
         templateUrl: "app/home/home.html"
     }).when("/login", {
         templateUrl: "app/login/login.html",
-        controller: "loginCtrl"
+        controller: "loginModalCtrl"
 
     }).when("/signup", {
 

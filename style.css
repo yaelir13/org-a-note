@@ -2,10 +2,25 @@ body{
     color:blue;
 }
 
+.jumbotron {
+    margin:0 ;
+}
+
 #steps{
     width:270px;
 }
 
-navbar{
-    color:turquoise;
+.navbar>a, .nav-item>a{
+    color:white;
+}
+
+.footer-img {
+    object-fit: contain;
+    /* height: 70px; */
+    margin:0;
+    width: 1215px;
+}
+
+#img-wrapper{
+    height: 200px;
 }

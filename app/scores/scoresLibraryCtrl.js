@@ -1,4 +1,10 @@
-app.controller("scoresLibraryCtrl", function($scope) {
+app.controller("scoresLibraryCtrl", function ($scope, $log, userLibrary) {
 
-    $scope.library="test";
-});
+    userLibrary.getActiveUserLibrary().then(function (scoresLibrary) {
+        $scope.scoresLibrary = scoresLibrary;
+        $log.log($scope.scoresLibrary);
+    }, function (error) {
+        $log.log(error);
+    })
+
+})

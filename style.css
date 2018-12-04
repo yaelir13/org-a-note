@@ -1,5 +1,5 @@
 body{
-    color:blue;
+   font-size: 13px;
 }
 
 .jumbotron {
@@ -9,6 +9,21 @@ body{
 #steps{
     width:270px;
 }
+
+.navbar {
+    margin-left:auto;
+    }
+
+.pencil{
+    font-size: 2em;
+}
+
+#annotate a::before{
+    color: transparent;
+    overflow: hidden;
+    max-height: 40px;
+    width: 16px;
+  }
 
 .navbar>a, .nav-item>a{
     color:white;
@@ -23,4 +38,16 @@ body{
 
 #img-wrapper{
     height: 200px;
+}
+
+.score-title{
+    display: inline-block;
+}
+
+.score-line{
+    overflow:hidden;
+}
+
+ul{
+    padding-inline-start: 0;
 }

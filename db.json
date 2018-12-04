@@ -1,0 +1,47 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "fname": "Yael",
+            "lname": "Ironi",
+            "email": "leay.inori@gmail.com",
+            "pwd": "xxx"
+        },
+        {
+            "id": 2,
+            "fname": "Gilad",
+            "lname": "Ironi",
+            "email": "guluironi@gmail.com",
+            "pwd": "yyy"
+        }
+    ],
+    "musicScore": [
+        {
+            "id": "1",
+            "title": "Concerto No 1",
+            "composer": "Bruch",
+            "score_img_path": "http://www.sheetmusicfox.com/images/144614.png",
+            "year": "1845",
+            "numPages": 5,
+            "userId": 1
+        },
+        {
+            "id": "2",
+            "title": "Prelude in C Major",
+            "composer": "J.S. Bach",
+            "score_img_path": "https://i.pinimg.com/originals/18/9c/94/189c9430a2d7958149a696b644ff97e9.gif",
+            "year": "1865",
+            "numPages": 3,
+            "userId": 1
+        },
+        {
+            "id": "2",
+            "title": "Violin Concerto",
+            "composer": "Khachaturian, Aram",
+            "score_img_path": "https://d29ci68ykuu27r.cloudfront.net/items/4296027/cover_images/cover-large_file.png",
+            "year": "1940",
+            "numPages": 33,
+            "userId": 1
+        }
+    ]
+}

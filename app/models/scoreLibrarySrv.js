@@ -19,7 +19,6 @@ app.factory("userLibrary", function ($q, $http, $log) {
         var async = $q.defer();
         var userId = 1;
 
-        // scoresLibrary = null;
         // This is a hack since we don't really have a persistant server.
         // So that all scores are recived only once.
         if (wasEverLoaded[userId]) {
@@ -27,7 +26,7 @@ app.factory("userLibrary", function ($q, $http, $log) {
         } else {
             scoresLibrary[userId] = [];
 
-            var scoresPath = "/app/scores/scores.json"
+            var scoresPath = "db.json"
             $http.get(scoresPath).then(function (response) {
 
                 for (var i = 0; i < response.data.musicScore.length; i++) {
@@ -36,7 +35,7 @@ app.factory("userLibrary", function ($q, $http, $log) {
                 }
                 wasEverLoaded[userId] = true; //hard-coded, change later
                 async.resolve(scoresLibrary[userId]);
-                
+
             }, function (error) {
                 async.reject(error);
             });

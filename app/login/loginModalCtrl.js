@@ -1,13 +1,13 @@
 app.controller("loginModalCtrl", function($scope, $location, user) {
-    // $scope.email = "leay.inor@gmail.com";
-    // $scope.pwd = "xxx";
+    $scope.email = "leay.inori@gmail.com";
+    $scope.pwd = "xxx";
 
     $scope.invalidLogin = false;
 
     // $scope.login = function() {
     //     $scope.invalidLogin = false;
-        
-    //     if ($scope.email === "leay.inor@gmail.com" && $scope.pwd === "xxx") {
+    //     debugger;
+    //     if ($scope.email === "leay.inori@gmail.com" && $scope.pwd === "xxx") {
     //         // success login
     //         $location.path("/scores")
     //     } else {
@@ -18,9 +18,11 @@ app.controller("loginModalCtrl", function($scope, $location, user) {
 
     $scope.login = function() {
         $scope.invalidLogin = false;
-
+        console.log("activeUser", $scope.activeUser);
         user.login($scope.email, $scope.pwd).then(function() {
             // success login
+            // $scope.activeUser=activeUser;
+            console.log("activeUser", $scope.activeUser);
             $location.path("/scores")
         }, function(error) {
             // failed login

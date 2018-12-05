@@ -2,8 +2,7 @@
 <div class="bg-info mt-2">
     <h3 class="display-8 text-center text-light p-2">My Digital Repertoire</h3>
     <nav class="navbar bg-info mx-auto">
-        <button class="round-btn plus fas fa-plus-circle ml-5" data-toggle="modal" data-target="#newModal"
-                href="#"></button>
+        <button class="round-btn plus fas fa-plus-circle ml-5" data-toggle="modal" data-target="#newModal" href="#"></button>
         <form class="form-inline col-6 text-center mx-auto">
             <input class="form-control mx-md-4" type="search" placeholder="Search" ng-model="searchText" size="40"
                 aria-label="Search">
@@ -15,8 +14,10 @@
             <li class="score-line row bg-light text-info rounded ml-4 mr-4 mt-2" ng-class="text-left" ng-click="addScore(result)"
                 ng-repeat="result in scoresLibrary | filter: searchText">
                 <div class="card-body col-1 mx-0 float-left" style="padding:2px">
-                    <img class="img-thumbnail" style="width:75px; padding:2px" src={{result.preview}} style="width:100px"
-                        alt="Score preview">
+                    <a type="button" class="submit" _blank=" " target="_blank" href="{{result.preview}}">
+                        <img class="img-thumbnail" style="width:75px; padding:2px" src={{result.preview}} style="width:100px"
+                            alt="Score preview" ng-click="result.preview">
+                    </a>
                 </div>
                 <div class="score-title card-body col-7 float-right">
                     <h6 class="card-title font-weight-bold mt-1">{{result.title}}</h6>

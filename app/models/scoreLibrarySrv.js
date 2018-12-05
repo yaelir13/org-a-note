@@ -1,4 +1,4 @@
-app.factory("userLibrary", function ($q, $http, $log) {
+app.factory("userLibrary", function ($q, $http, $log, user) {
 
     var scoresLibrary = {};
     var wasEverLoaded = {};
@@ -44,8 +44,27 @@ app.factory("userLibrary", function ($q, $http, $log) {
         return async.promise;
     }
 
+    function createScore(title, composer, score_img_path, year, numPages) {
+        var async = $q.defer();
+
+        var userId = user.getActiveUser().id;
+
+        var newScore = new Score({id:-1, title: title, composer: composer,
+            preview: score_img_path, year: year, numPages: numPages, 
+            userId: userId});
+
+        // if working with real server:
+        //$http.post("http://my-json-server.typicode.com/nirch/recipe-book-v3/recipes", newRecipe).then.....
+
+        scoresLibrary[userId].push(newScore);
+        async.resolve(newScore);
+
+        return async.promise;
+    }
+
     return {
-        getActiveUserLibrary: getActiveUserLibrary
+        getActiveUserLibrary: getActiveUserLibrary,
+        createScore: createScore
     }
 
 })

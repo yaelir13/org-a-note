@@ -2,18 +2,16 @@
 <div class="bg-info mt-2">
     <h3 class="display-8 text-center text-light p-2">My Digital Repertoire</h3>
     <nav class="navbar bg-info mx-auto">
+        <button class="round-btn plus fas fa-plus-circle ml-5" data-toggle="modal" data-target="#newModal"
+                href="#"></button>
         <form class="form-inline col-6 text-center mx-auto">
-            <div class="form-inline col-2 bg-info"></div>
-            <input class="form-control mx-md-2" type="search" placeholder="Search" ng-model="searchText" size="40"
+            <input class="form-control mx-md-4" type="search" placeholder="Search" ng-model="searchText" size="40"
                 aria-label="Search">
             <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
         </form>
     </nav>
     <div>
         <ul ng-class="container" class="px-5" id="Score_library">
-            <!-- <div class="list-group search-results">
-                <a href="#" class="list-group-item list-group-item-action" ng-repeat="result in searchResults" ng-click="addActor(result)">{{result.name}}</a>
-            </div> -->
             <li class="score-line row bg-light text-info rounded ml-4 mr-4 mt-2" ng-class="text-left" ng-click="addScore(result)"
                 ng-repeat="result in scoresLibrary | filter: searchText">
                 <div class="card-body col-1 mx-0 float-left" style="padding:2px">
@@ -32,3 +30,4 @@
         <br>
     </div>
 </div>
+<new-score-modal></new-score-modal>

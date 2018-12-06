@@ -17,20 +17,20 @@ app.factory("userLibrary", function ($q, $http, $log, user) {
     function getActiveUserLibrary() {
 
         var async = $q.defer();
-        var userId = 1;
+        var userId = user.getActiveUser().id;;
 
         // This is a hack since we don't really have a persistant server.
-        // So that all scores are recived only once.
+        // So that all scores are received only once.
         if (wasEverLoaded[userId]) {
             async.resolve(scoresLibrary[userId]);
         } else {
             scoresLibrary[userId] = [];
 
-            var scoresPath = "db.json"
+            var scoresPath = "http://my-json-server.typicode.com/yaelir13/org-a-note/musicScore?userId=" + userId;
             $http.get(scoresPath).then(function (response) {
-
-                for (var i = 0; i < response.data.musicScore.length; i++) {
-                    var score = new Score(response.data.musicScore[i]);
+                $log.log(response);
+                for (var i = 0; i < response.data.length; i++) {
+                    var score = new Score(response.data[i]);
                     scoresLibrary[userId].push(score);
                 }
                 wasEverLoaded[userId] = true; //hard-coded, change later
@@ -49,9 +49,11 @@ app.factory("userLibrary", function ($q, $http, $log, user) {
 
         var userId = user.getActiveUser().id;
 
-        var newScore = new Score({id:-1, title: title, composer: composer,
-            preview: score_img_path, year: year, numPages: numPages, 
-            userId: userId});
+        var newScore = new Score({
+            id: -1, title: title, composer: composer,
+            score_img_path: score_img_path, year: year, numPages: numPages,
+            userId: userId
+        });
 
         // if working with real server:
         //$http.post("http://my-json-server.typicode.com/nirch/recipe-book-v3/recipes", newRecipe).then.....

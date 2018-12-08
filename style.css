@@ -120,6 +120,29 @@ ul{
     width: 100%;
 }
 
+.facebook-button {
+    background: #4464a2;
+    color: white;
+    font-size: 1.2em;
+}
+
+.facebook-button:hover {
+    color: white;
+    font-size: 1.2em;
+}
+
+.social-account-button {
+    padding-left: 20px;
+    text-align: left;
+}
+
+.button-fullwidth {
+    display: block;
+    width: 100%;
+    padding:10px;
+    text-align: center;
+    margin: 20px 0;
+}
 
 .clearfix{
 	overflow: auto;
@@ -210,3 +233,30 @@ input.fileUpload{
 	top: 2px;
 	left: 7px;
 }
+
+
+#can {
+    position: absolute;
+    top: 54px;
+    left: 0px;
+  }
+  
+  .colors {
+    border: 1px solid black;
+    display: inline-flex;
+  }
+  
+  .swatch {
+    min-width: 16px;
+    min-height: 16px;
+    max-width: 16px;
+    border: 1px solid black;
+    display: inline-block;
+    margin: 2px;
+    cursor: pointer;
+  
+  }
+  
+  .highlight {
+    border: 1px solid red;
+  }

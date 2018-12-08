@@ -4,9 +4,9 @@ app.config(function ($routeProvider) {
     $routeProvider
         .when("/", {
             templateUrl: "app/home/home.html"
-        // }).when("/signup", {
-        //     templateUrl: "app/signup/signup.html",
-        //     controller: "signupCtrl"
+        }).when("/annotate", {
+            templateUrl: "app/annotate/annotate.html",
+            // controller: "canvasCtrl"
         }).when("/features", {
             templateUrl: "app/features/features.html"
         }).when("/scores", {

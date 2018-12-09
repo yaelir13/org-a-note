@@ -1,4 +1,4 @@
-app.controller("canvasCtrl", function ($scope, $log, canvasSrv) {
+app.controller("canvasCtrl", function ($scope, $log, $routeParams, userLibrary) {
 
     // size of drawing and its starting background colour
     const drawingInfo = {
@@ -6,7 +6,6 @@ app.controller("canvasCtrl", function ($scope, $log, canvasSrv) {
         height: 160,
         bgColor: "white",
     }
-
     const brushSizes = [1, 2, 3, 4, 5, 6, 7, 8];
     const colors = "red,orange,yellow,green,cyan,blue,purple,white,gray,black".split(",");
     var currentColor = "blue";
@@ -14,7 +13,6 @@ app.controller("canvasCtrl", function ($scope, $log, canvasSrv) {
     var currentSelectBrush;
     var currentSelectColor;
     const colorSel = document.getElementById("colorSel");
-    $log.log(colorSel);
     colors.forEach((color, i) => {
         var swatch = document.createElement("span");
         swatch.className = "swatch";
@@ -64,11 +62,11 @@ app.controller("canvasCtrl", function ($scope, $log, canvasSrv) {
     const mouse = createMouse().start(canvas, true);
     const ctx = canvas.getContext("2d");
 
-    ctx.font = "30px Comic Sans MS";
-    ctx.fillStyle = "red";
-    ctx.textAlign = "center";
-    ctx.fillText("&xi;", 50, 50);
-    ctx.fillText("test", canvas.width / 2, canvas.height / 2);
+    // ctx.font="30px Comic Sans MS";
+    // ctx.fillStyle = "red";
+    // ctx.textAlign = "center";
+    // ctx.fillText("&xi;", 50, 50);
+    // ctx.fillText("test", canvas.width/2, canvas.height/2);
 
     var updateDisplay = true; // when true the display needs updating
     var ch, cw, w, h; // global canvas size vars
@@ -235,13 +233,39 @@ app.controller("canvasCtrl", function ($scope, $log, canvasSrv) {
     }
 
     requestAnimationFrame(update);
+    debugger;
 
-    
+    $scope.imgID = $routeParams.id;
 
-    canvasSrv.loadImage($scope.imgUrl).then(function (canvas) {
-        $canvasContent=canvas;
+    userLibrary.getActiveUserLibrary().then(function (scoresLibrary) {
+        $scope.scoresLibrary = scoresLibrary;
+        var notFound = true;
+        var i = 0;
+        while (notFound) {
+            if ($scope.scoresLibrary[i].id == $scope.imgID) {
+                $scope.score = $scope.scoresLibrary[i];
+                $scope.preview = $scope.score.preview;
+                notFound = false;
+            }
+            else i += 1;
+        }
+        loadImage($scope.preview);
     })
 
-    //   saveImage();
+    /* load and add image to the drawing. It may take time to load. */
+    function loadImage(url) {
+        const image = new Image();
+        image.src = url;
+        image.onload = function () {
+            if (drawing && drawing.ctx) {
+                drawing.width = image.width;
+                drawing.height = image.height;
+                drawing.ctx.drawImage(image, 0, 0);
+            }
+        }
+
+    }
+
+
 
 })

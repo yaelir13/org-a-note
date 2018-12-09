@@ -4,9 +4,12 @@ app.config(function ($routeProvider) {
     $routeProvider
         .when("/", {
             templateUrl: "app/home/home.html"
-        }).when("/annotate", {
+        // }).when("/annotate", {
+        //     templateUrl: "app/annotate/annotate.html",
+        //     controller: "canvasCtrl"
+        }).when("/annotate/:id", {
             templateUrl: "app/annotate/annotate.html",
-            // controller: "canvasCtrl"
+            controller: "canvasCtrl"    
         }).when("/features", {
             templateUrl: "app/features/features.html"
         }).when("/scores", {

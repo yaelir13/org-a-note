@@ -1,7 +1,7 @@
 
-app.factory("user", function($q, $http, $log, $timeout, $filter) {
+app.factory("user", function($q, $http, $log, $timeout, $filter, $rootScope) {
 
-    var activeUser = null;
+    // var activeUser = null;
     // new User( {
     //     "id": 1,
     //     "fname": "Nir",
@@ -16,7 +16,6 @@ app.factory("user", function($q, $http, $log, $timeout, $filter) {
         this.lname = plainUser.lname;
         this.username = plainUser.username;
         this.pwd = plainUser.pwd;
-        $log.log("in constructor", User);
     }
 
     function login(username, pwd) {
@@ -29,6 +28,7 @@ app.factory("user", function($q, $http, $log, $timeout, $filter) {
             if (response.data.length > 0) {
                 // success login
                 activeUser = new User(response.data[0]);
+                $rootScope.activeUser=activeUser;
                 $log.log("suucess login", response, response.data.length, activeUser);
                 async.resolve(activeUser);
             } else {
@@ -43,15 +43,15 @@ app.factory("user", function($q, $http, $log, $timeout, $filter) {
     }
 
     function isLoggedIn() {
-        return activeUser ? true : false;
+        return $rootScope.activeUser ? true : false;
     }
 
     function logout() {
-        activeUser = null;
+        $rootScope.activeUser = null;
     }
 
     function getActiveUser() {
-        return activeUser;
+        return $rootScope.activeUser;
     }
 
     function Create(user) {

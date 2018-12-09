@@ -1,8 +1,14 @@
 app.factory("userLibrary", function ($q, $http, $log, user) {
 
     var scoresLibrary = {};
-    var wasEverLoaded = {};
-    wasEverLoaded[1] = false;
+    var wasEverLoaded = [0];
+   
+    // while (i != 0) {
+    //     wasEverLoaded[i] = [false];
+    //     i += 1;
+    // }
+
+    // wasEverLoaded[1] = false;
 
     function Score(musicScore) {
         this.id = musicScore.id;

@@ -1,7 +1,8 @@
 <navbar-scores></navbar-scores>
 <div class="jumbotron jumbotron-fluid bg-info text-center text-white mt-2">
     <div class="container ">
-        <h2 class="text-white text-center text-bold"> Welcome Aboard Org-a-Note !</h1>
+        <h2 class="text-white text-center mb-1 text-bold"> Welcome Aboard Org-a-Note</h1>
+            <div class="display-4 inline mt-1" ng-bind="activeUser"></div>
             <h5 class="text-white text-center text-bold">Wether you want to digitize your entire repertoire, or just
                 Search & sort it</h5>
             <h5 class="text-white text-center text-bold">you'll enjoy these amazing features</h5>
@@ -10,11 +11,11 @@
                 <div class="text-left mt-5">
                     <div class="feature text-center col-3 ml-5 mr-4">
                         <p col-2>Upload</p>
-                        <i class="fas fa-upload"></i>
+                        <a href="#!/scores"><i class="fas fa-upload"></i></a>
                     </div>
                     <div class="feature text-center col-3 mr-4">
                         <p col-2>Search</p>
-                        <i class="fas fa-search"></i>
+                        <a href="#!/scores"><i class="fas fa-search"></i></a>
                     </div>
                     <div class="feature text-center col-3">
                         <p col-2>Share</p>
@@ -32,7 +33,7 @@
                     </div>
                     <div class="feature text-center col-3">
                         <p col-2>Annotate</p>
-                        <i class="fas fa-pencil-alt"></i>
+                        <a href="#!/scores"><i class="fas fa-pencil-alt"></i></a>
                     </div>
                 </div>
             </div>

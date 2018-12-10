@@ -23,7 +23,9 @@ app.factory("userLibrary", function ($q, $http, $log, user) {
     function getActiveUserLibrary() {
 
         var async = $q.defer();
-        var userId = user.getActiveUser().id;;
+        var userId;
+        if(user.getActiveUser())
+         userId = user.getActiveUser().id;;
 
         // This is a hack since we don't really have a persistant server.
         // So that all scores are received only once.
@@ -52,8 +54,8 @@ app.factory("userLibrary", function ($q, $http, $log, user) {
 
     function createScore(title, composer, score_img_path, year, numPages) {
         var async = $q.defer();
-
-        var userId = user.getActiveUser().id;
+        if(user.getActiveUser())
+        userId = user.getActiveUser().id;;
 
         var newScore = new Score({
             id: -1, title: title, composer: composer,

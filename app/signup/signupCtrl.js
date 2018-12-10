@@ -1,22 +1,14 @@
-app.controller("signupCtrl", function(user, $location, $log) {
-   
-    var vm = this;
+app.controller("signupCtrl", function ($scope, user, $location, $log, $rootScope) {
 
-    vm.register = register;
-
-    function register() {
-        vm.dataLoading = true;
-        user.Create(vm.user)
-            .then(function (response) {
-                $log.log(vm.user)
-                if (response.success) {
-                    $log.Success('Registration successful', true);
-                    $location.path('/login');
-                } else {
-                    $log.Error(response.message);
-                    vm.dataLoading = false;
-                }
-            });
+    $scope.createUser = function () {
+        user.createUser($scope.fname, $scope.lname,
+            $scope.username, $scope.pwd).then(function (user) {
+                $rootScope.activeUser = user.fname;
+                $scope.isLoggedIn = true;
+                $(".modal-backdrop").remove();
+                $location.path('/features');
+            }, function (err) {
+                console.log(err);
+            })
     }
-
 });

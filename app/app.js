@@ -11,7 +11,8 @@ app.config(function ($routeProvider) {
             templateUrl: "app/annotate/annotate.html",
             controller: "canvasCtrl"    
         }).when("/features", {
-            templateUrl: "app/features/features.html"
+            templateUrl: "app/features/features.html",
+            controller: "featuresCtrl"
         }).when("/scores", {
             templateUrl: "app/scores/scoresLibrary.html",
             controller: "scoresLibraryCtrl"

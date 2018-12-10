@@ -1,5 +1,5 @@
 
-app.factory("user", function($q, $http, $log, $timeout, $filter, $rootScope) {
+app.factory("user", function ($q, $http, $log, $timeout, $filter, $rootScope) {
 
     // var activeUser = null;
     // new User( {
@@ -23,19 +23,17 @@ app.factory("user", function($q, $http, $log, $timeout, $filter, $rootScope) {
 
         var loginURL = "http://my-json-server.typicode.com/yaelir13/org-a-note/users?email=" +
             username + "&pwd=" + pwd;
-        $http.get(loginURL).then(function(response) {
-            $log.log("after get in login", response, response.data.length);
+        $http.get(loginURL).then(function (response) {
             if (response.data.length > 0) {
                 // success login
                 activeUser = new User(response.data[0]);
-                $rootScope.activeUser=activeUser;
-                $log.log("suucess login", response, response.data.length, activeUser);
+                $rootScope.activeUser = activeUser;
                 async.resolve(activeUser);
             } else {
                 // invalid email or password
                 async.reject("invalid email or password")
             }
-        }, function(error) {
+        }, function (error) {
             async.reject(error);
         });
 
@@ -54,59 +52,60 @@ app.factory("user", function($q, $http, $log, $timeout, $filter, $rootScope) {
         return $rootScope.activeUser;
     }
 
-    function Create(user) {
-        var deferred = $q.defer();
+    var usersArr = [];
+    var lastArrItem = {};
 
-        // simulate api call with $timeout
-        $timeout(function () {
-            GetByUsername(user.username)
-                .then(function (duplicateUser) {
-                    if (duplicateUser !== null) {
-                        deferred.resolve({ success: false, message: 'Username "' + user.username + '" is already taken' });
-                    } else {
-                        var users = getUsers();
+    function getAllUsers() {
+        var async = $q.defer();
+        var usersUrl = "http://my-json-server.typicode.com/yaelir13/org-a-note/users";
 
-                        // assign id
-                        var lastUser = users[users.length - 1] || { id: 0 };
-                        user.id = lastUser.id + 1;
+        $http.get(usersUrl).then(function (response) {
+           usersArr = response.data;
+            async.resolve(usersArr);
+        }, function (error) {
+            async.reject(error);
+        });
 
-                        // save to local storage
-                        users.push(user);
-                        setUsers(users);
-
-                        deferred.resolve({ success: true });
-                    }
-                });
-        }, 1000);
-
-        return deferred.promise;
+        return async.promise;
     }
 
-    function GetByUsername(username) {
-        var deferred = $q.defer();
-        var filtered = $filter('filter')(getUsers(), { username: username });
-        var user = filtered.length ? filtered[0] : null;
-        deferred.resolve(user);
-        return deferred.promise;
-    }
+    getAllUsers().then(function (response) {
+        usersArr = response;
+        // return usersArr;
+    }, function (error) {
+        // failed to get users
+        $log.error(error);
+    })
 
-    function getUsers() {
-        if(!localStorage.users){
-            localStorage.users = JSON.stringify([]);
-        }
-
-        return JSON.parse(localStorage.users);
+    function getNextId() {
+        lastArrItem = usersArr[usersArr.length - 1];
+        lastUserId = lastArrItem.id;
+        return lastUserId;
     }
+    
 
-    function setUsers(users) {
-        localStorage.users = JSON.stringify(users);
-    }
+function createUser(fname, lname, username, pwd) {
+    var async = $q.defer();
 
-    return {
-        login: login,
-        isLoggedIn: isLoggedIn,
-        logout: logout,
-        getActiveUser: getActiveUser,
-        Create: Create
-    }
+    var newUserId = getNextId() + 1;
+    var newUser = new User({
+        id: newUserId, fname: fname, lname: lname,
+        username: username, pwd: pwd
+    });
+
+    usersArr.push(newUser);
+    async.resolve(newUser);
+
+    return async.promise;
+}
+
+return {
+    login: login,
+    isLoggedIn: isLoggedIn,
+    logout: logout,
+    getActiveUser: getActiveUser,
+    getNextId: getNextId,
+    getAllUsers: getAllUsers,
+    createUser: createUser
+}
 })

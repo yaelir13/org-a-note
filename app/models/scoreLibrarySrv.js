@@ -52,7 +52,7 @@ app.factory("userLibrary", function ($q, $http, $log, user) {
         } else {
             scoresLibrary[userId] = [];
 
-            var scoresPath = "http://my-json-server.typicode.com/yaelir13/org-a-note/musicScore?userId=" + userId;
+            var scoresPath = "https://my-json-server.typicode.com/yaelir13/org-a-note/musicScore?userId=" + userId;
             $http.get(scoresPath).then(function (response) {
                 for (var i = 0; i < response.data.length; i++) {
                     var score = new Score(response.data[i]);
@@ -81,23 +81,23 @@ app.factory("userLibrary", function ($q, $http, $log, user) {
         // This is a hack since we don't really have a persistant server.
         // So that all scores are received only once.
         // for (var i = 0; i < 141000; i++) {
-            // scoresPath[i] = "https://imslp.org/imslpscripts/API.ISCR.php?account=worklist/disclaimer=accepted/sort=id/type=2/start=" + i + "/";
-            scoresPath[0] = "https://imslp.org/imslpscripts/API.ISCR.php?account=worklist/disclaimer=accepted/sort=id/type=2/start=0/";
-            $http.get(scoresPath[0]).then(function (response) {
-                for (var i = 0; i < 1000; i++) {
-                    $log.log(response.data);
-                    var score = new IMSLP(response.data[i]);
-                    // var filePath = "https://imslp.org//wiki//" + response.data[i].id;
-                    IMSLPdatabasePage.push(score);
-                }
-                async.resolve(IMSLPdatabasePage);
+        // scoresPath[i] = "https://imslp.org/imslpscripts/API.ISCR.php?account=worklist/disclaimer=accepted/sort=id/type=2/start=" + i + "/";
+        scoresPath[0] = "https://imslp.org/imslpscripts/API.ISCR.php?account=worklist/disclaimer=accepted/sort=id/type=2/start=0/";
+        $http.get(scoresPath[0]).then(function (response) {
+            for (var i = 0; i < 1000; i++) {
+                $log.log(response.data);
+                var score = new IMSLP(response.data[i]);
+                // var filePath = "https://imslp.org//wiki//" + response.data[i].id;
+                IMSLPdatabasePage.push(score);
+            }
+            async.resolve(IMSLPdatabasePage);
 
-            }, function (error) {
-                async.reject(error);
-            });
+        }, function (error) {
+            async.reject(error);
+        });
 
-            // IMSLPdatabase.push(IMSLPdatabasePage);
-            // return IMSLPdatabase;
+        // IMSLPdatabase.push(IMSLPdatabasePage);
+        // return IMSLPdatabase;
         // }
 
         return async.promise;
@@ -115,8 +115,6 @@ app.factory("userLibrary", function ($q, $http, $log, user) {
         });
 
         // if working with real server:
-        //$http.post("http://my-json-server.typicode.com/nirch/recipe-book-v3/recipes", newRecipe).then.....
-
         scoresLibrary[userId].push(newScore);
         async.resolve(newScore);
 

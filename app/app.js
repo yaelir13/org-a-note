@@ -1,4 +1,4 @@
-var app = angular.module("orgANoteApp", ["ngRoute"]);
+var app = angular.module("orgANoteApp", ['ngRoute']);
 
 app.config(function ($routeProvider) {
     $routeProvider
@@ -16,6 +16,12 @@ app.config(function ($routeProvider) {
         }).when("/scores", {
             templateUrl: "app/scores/scoresLibrary.html",
             controller: "scoresLibraryCtrl"
+        }).when("/resources", {
+            templateUrl: "app/resources/resources.html",
+            controller: "resourcesCtrl"
+        // }).when("/calendar", {
+        //     templateUrl: "app/calendar/calendar.html",
+        //     controller: "calendarCtrl"
         }).when("/new", {
             templateUrl: "app/scores/newScore.html",
             controller: "newScoreCtrl"

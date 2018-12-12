@@ -3,7 +3,7 @@ app.controller("canvasCtrl", function ($scope, $log, $routeParams, userLibrary) 
     // size of drawing and its starting background colour
     const drawingInfo = {
         width: 384,
-        height: 160,
+        height: 420,
         bgColor: "white",
     }
     const brushSizes = [1, 2, 3, 4, 5, 6, 7, 8];
@@ -252,7 +252,29 @@ app.controller("canvasCtrl", function ($scope, $log, $routeParams, userLibrary) 
         loadImage($scope.preview);
     })
 
+    // function toDataURL(url, callback) {
+    //     var httpRequest = new XMLHttpRequest();
+    //     httpRequest.onload = function () {
+    //         var fileReader = new FileReader();
+    //         fileReader.onloadend = function () {
+    //             callback(fileReader.result);
+    //         }
+    //         fileReader.readAsDataURL(httpRequest.response);
+    //     };
+    //     httpRequest.open('GET', url);
+    //     httpRequest.responseType = 'blob';
+    //     httpRequest.send();
+    // }
+    // toDataURL('$scope.preview', function (dataUrl) {
+    //     document.write('Result in string:', dataUrl)
+    // })
+
+
     /* load and add image to the drawing. It may take time to load. */
+  
+    //     image.onload = draw();
+
+
     function loadImage(url) {
         const image = new Image();
         image.src = url;
@@ -266,6 +288,11 @@ app.controller("canvasCtrl", function ($scope, $log, $routeParams, userLibrary) 
 
     }
 
-
-
+    $scope.to_image = function () {
+        var can = document.getElementById("can");
+        var image = can.toDataURL("image/png").replace("image/png", "image/octet-stream");  // here is the most important part because if you dont replace you will get a DOM 18 exception.
+        window.location.href = image;
+        $scope.updatedScore = image;
+        $log.log($scope.updatedScore); // it will save locally
+    }
 })

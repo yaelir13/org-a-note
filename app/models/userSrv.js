@@ -21,7 +21,7 @@ app.factory("user", function ($q, $http, $log, $timeout, $filter, $rootScope) {
     function login(username, pwd) {
         var async = $q.defer();
 
-        var loginURL = "http://my-json-server.typicode.com/yaelir13/org-a-note/users?email=" +
+        var loginURL = "https://my-json-server.typicode.com/yaelir13/org-a-note/users?email=" +
             username + "&pwd=" + pwd;
         $http.get(loginURL).then(function (response) {
             if (response.data.length > 0) {
@@ -57,7 +57,7 @@ app.factory("user", function ($q, $http, $log, $timeout, $filter, $rootScope) {
 
     function getAllUsers() {
         var async = $q.defer();
-        var usersUrl = "http://my-json-server.typicode.com/yaelir13/org-a-note/users";
+        var usersUrl = "https://my-json-server.typicode.com/yaelir13/org-a-note/users";
 
         $http.get(usersUrl).then(function (response) {
            usersArr = response.data;

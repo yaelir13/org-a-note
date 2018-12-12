@@ -52,7 +52,7 @@ app.factory("userLibrary", function ($q, $http, $log, user) {
         } else {
             scoresLibrary[userId] = [];
 
-            var scoresPath = "http://my-json-server.typicode.com/yaelir13/org-a-note/musicScore?userId=" + userId;
+            var scoresPath = "https://my-json-server.typicode.com/yaelir13/org-a-note/musicScore?userId=" + userId;
             $http.get(scoresPath).then(function (response) {
                 for (var i = 0; i < response.data.length; i++) {
                     var score = new Score(response.data[i]);
@@ -115,7 +115,7 @@ app.factory("userLibrary", function ($q, $http, $log, user) {
         });
 
         // if working with real server:
-        //$http.post("http://my-json-server.typicode.com/nirch/recipe-book-v3/recipes", newRecipe).then.....
+        //$http.post("https://my-json-server.typicode.com/nirch/recipe-book-v3/recipes", newRecipe).then.....
 
         scoresLibrary[userId].push(newScore);
         async.resolve(newScore);

@@ -83,7 +83,8 @@ app.factory("userLibrary", function ($q, $http, $log, user) {
         // for (var i = 0; i < 141000; i++) {
         // scoresPath[i] = "https://imslp.org/imslpscripts/API.ISCR.php?account=worklist/disclaimer=accepted/sort=id/type=2/start=" + i + "/";
         scoresPath[0] = "https://imslp.org/imslpscripts/API.ISCR.php?account=worklist/disclaimer=accepted/sort=id/type=2/start=0/";
-        $http.get(scoresPath[0]).then(function (response) {
+        CORSscoresPath = "https://cors-anywhere.herokuapp.com/"+scoresPath[0];
+        $http.get(CORSscoresPath).then(function (response) {
             for (var i = 0; i < 1000; i++) {
                 $log.log(response.data);
                 var score = new IMSLP(response.data[i]);

@@ -1,6 +1,6 @@
 app.controller("loginModalCtrl", function($scope, $location, user) {
-    // $scope.username = "leay.inori@gmail.com";
-    // $scope.pwd = "xxx";
+    $scope.username = "leay.inori@gmail.com";
+    $scope.pwd = "xxx";
 
     $scope.invalidLogin = false;
 
@@ -18,10 +18,8 @@ app.controller("loginModalCtrl", function($scope, $location, user) {
 
     $scope.login = function() {
         $scope.invalidLogin = false;
-        console.log("activeUser", $scope.activeUser);
         user.login($scope.username, $scope.pwd).then(function() {
             // success login
-            // $scope.activeUser=activeUser;
             console.log("activeUser", $scope.activeUser);
             $location.path("/scores")
         }, function(error) {

@@ -2,24 +2,49 @@
 <div class="jumbotron jumbotron-fluid bg-info text-center text-white mt-2">
     <div class="container ">
         <h1 class="text-white text-bold">
-            <i class="note fas fa-music"></i><div class="spacer"></div><pre class="text-white text-bold">An orginized Musician is
-a More Successful and Productive Musician </pre><div class="spacer"></div><i class="note fas fa-music"></i>
+            <i class="note fas fa-music"></i>
+            <div class="spacer"></div>
+            <pre class="text-white text-bold">An orginized Musician is
+a More Successful and Productive Musician </pre>
+            <div class="spacer"></div><i class="note fas fa-music"></i>
         </h1>
         <!--<i class="fas fa-music"></i>-->
         <p class="mt-5">To start organizing your notes today, follow these 3 easy steps</p>
         <div id="steps" class="mx-auto">
             <div class="text-left mt-2">
-                <p> Step 1: <a class="link text-white mb-2" href="Jumbo action link" role="button">Register to
-                        Org-a-Note</a></p>
-                <p> Step 2: <a class="link text-white mb-2" href="#/scores" role="button">Start your digital
-                        scores
-                        library</a></p>
-                <p> Step 3: <a class="link text-white mb-2" href="Jumbo action link" role="button">Share with your
-                        friends</a></p>
+                <p> Step 1:
+                    <a class="link text-white mb-2" data-toggle="modal" data-target="#registerModal1" href="#" role="button">
+                        Register to Org-a-Note</a></p>
+                <p> Step 2:
+                    <a class="link text-white mb-2" data-toggle="modal" data-target="#notLoggedIn" href="#" role="button">Start
+                        your digital scores library</a></p>
+                <p> Step 3:
+                    <a class="link text-white mb-2" href="Jumbo action link" role="button">Share with your friends</a></p>
             </div>
         </div>
     </div>
 </div>
 <div id="img-wrapper">
     <img class="footer-img" src="app/home/homepage_footer_img.png">
+</div>
+<!-- Modal -->
+<div class="modal" id="notLoggedIn" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Note</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="/action_page.php">
+                    <p>You must be logged in to start building your score library</p>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">סגור</button>
+            </div>
+        </div>
+    </div>
 </div>

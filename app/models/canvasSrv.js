@@ -18,7 +18,7 @@ app.factory("canvasSrv", function ($q, $log) {
 
         return async.promise;
     }
-
+   
     return {
         loadImage: loadImage
     }

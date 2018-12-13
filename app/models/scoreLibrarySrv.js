@@ -116,6 +116,8 @@ app.factory("userLibrary", function ($q, $http, $log, user) {
         });
 
         // if working with real server:
+        //$http.post("https://my-json-server.typicode.com/nirch/recipe-book-v3/recipes", newRecipe).then.....
+
         scoresLibrary[userId].push(newScore);
         async.resolve(newScore);
 

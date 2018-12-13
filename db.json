@@ -20,7 +20,7 @@
             "id": "1",
             "title": "Concerto No 1",
             "composer": "Bruch",
-            "score_img_path": "images/violin_concerto_example.png",
+            "score_img_path": "images/Bruch-concerto_no_1.png",
             "year": "1845",
             "numPages": 5,
             "userId": 1
@@ -29,7 +29,7 @@
             "id": "2",
             "title": "Prelude in C Major",
             "composer": "J.S. Bach",
-            "score_img_path": "https://i.pinimg.com/originals/44/93/d8/4493d8bb3caae8c68fd5ab0c6890ee03.png",
+            "score_img_path": "images/Bach-prelude-in-c-minor.png",
             "year": "1865",
             "numPages": 3,
             "userId": 1
@@ -38,7 +38,7 @@
             "id": "4",
             "title": "Ave Maria",
             "composer": "J.S. Bach",
-            "score_img_path": "https://d29ci68ykuu27r.cloudfront.net/items/20039715/cover_images/cover-large_file.png",
+            "score_img_path": "images/Bach-ave_maria.png",
             "year": "1865",
             "numPages": 3,
             "userId": 1
@@ -46,8 +46,8 @@
         {
             "id": "5",
             "title": "fur elise",
-            "composer": "Ludwig van Beethoven",
-            "score_img_path": "https://i.pinimg.com/originals/9f/44/c1/9f44c12b77ad2bff9d9a8ab36664f644.png",
+            "composer": "Ludwig van Bethoveen",
+            "score_img_path": "images/bethoveen-fur_elise.png",
             "year": "1865",
             "numPages":4,
             "userId": 1
@@ -56,7 +56,7 @@
             "id": "3",
             "title": "Violin Concerto",
             "composer": "Khachaturian, Aram",
-            "score_img_path": "https://d29ci68ykuu27r.cloudfront.net/items/4296027/cover_images/cover-large_file.png",
+            "score_img_path": "images/Khachaturian-violin_concerto.jpg",
             "year": "1940",
             "numPages": 33,
             "userId": 2

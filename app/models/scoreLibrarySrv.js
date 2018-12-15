@@ -15,27 +15,32 @@ app.factory("userLibrary", function ($q, $http, $log, user) {
         this.title = musicScore.title;
         this.composer = musicScore.composer;
         this.preview = musicScore.score_img_path;
-        this.year = musicScore.year;
+        this.Movement = musicScore.Movement;
         this.numPages = musicScore.numPages;
         this.userId = musicScore.userId;
     }
-
+   
     function IMSLP(musicScore) {
         this.id = musicScore.id;
-        this.type = musicScore.type;
-        this.parent = musicScore.parent;
-        this.intvals[
-            this.composer,
-            this.worktitle,
-            this.icanto,
-            this.pageid] = [
-                musicScore.composer,
-                musicScore.worktitle,
-                musicScore.icanto,
-                musicScore.pageid];
-
-        this.permalink = musicScore.permalink;
+        this.Intvals = Object.values(musicScore.intvals);
+        this.permlink = musicScore.permlink;
+        this.linkPDF = "https://imslp.org//wiki//" + musicScore.id;
     }
+    // var scoreArr = [];
+    // scoreArr=Object.keys(Intvals);
+    // $log.log(scoreArr);
+
+    // IMSLP.prototype.intvals={
+    //         composer: Intvals.composer,
+    //         worktitle: worktitle,
+    //         icanto: icanto,
+    //         pageid: pageid
+    // }
+
+    // this.composer = musicScore.composer;
+    // this.worktitle = musicScore.worktitle;
+    // this.icanto = musicScore.icanto;
+    // this.pageid = musicScore.pageid;
 
 
     function getActiveUserLibrary() {
@@ -69,10 +74,11 @@ app.factory("userLibrary", function ($q, $http, $log, user) {
         return async.promise;
     }
 
-    var scoresPath = [];
-    var IMSLPdatabase = [];
+
+
+    var scoresPath = '';
     var IMSLPdatabasePage = [];
-    var scoreArr = [];
+    
 
     function getIMSLPLibrary() {
 
@@ -82,13 +88,14 @@ app.factory("userLibrary", function ($q, $http, $log, user) {
         // So that all scores are received only once.
         // for (var i = 0; i < 141000; i++) {
         // scoresPath[i] = "https://imslp.org/imslpscripts/API.ISCR.php?account=worklist/disclaimer=accepted/sort=id/type=2/start=" + i + "/";
-        scoresPath[0] = "https://imslp.org/imslpscripts/API.ISCR.php?account=worklist/disclaimer=accepted/sort=id/type=2/start=0/";
-        CORSscoresPath = "https://cors-anywhere.herokuapp.com/"+scoresPath[0];
-        $http.get(CORSscoresPath).then(function (response) {
-            for (var i = 0; i < 1000; i++) {
-                $log.log(response.data);
+        // scoresPath[0] = "https://imslp.org/imslpscripts/API.ISCR.php?account=worklist/disclaimer=accepted/sort=id/type=2/start=0/";
+        // CORSscoresPath = "https://cors-anywhere.herokuapp.com/" + scoresPath[0];
+        var scoresPath = "https://my-json-server.typicode.com/yaelir13/org-a-note/IMSLP;
+        // $http.get(CORSscoresPath).then(function (response) {
+            $http.get(scoresPath).then(function (response) {
+            for (var i = 0; i < response.data.length; i++) {
+
                 var score = new IMSLP(response.data[i]);
-                // var filePath = "https://imslp.org//wiki//" + response.data[i].id;
                 IMSLPdatabasePage.push(score);
             }
             async.resolve(IMSLPdatabasePage);
@@ -103,15 +110,23 @@ app.factory("userLibrary", function ($q, $http, $log, user) {
 
         return async.promise;
     }
+    var ScoreId = "";
+    function getNextScoreId(userId) {
+        getActiveUserLibrary().then(function (scoresLibrary) {
+            var lastArrItem = scoresLibrary[scoresLibrary.length - 1];
+            ScoreId = lastArrItem.id;
+        })
+        return ScoreId;
+    }
 
-    function createScore(title, composer, score_img_path, year, numPages) {
+    function createScore(title, composer, score_img_path, Movement, numPages) {
         var async = $q.defer();
         if (user.getActiveUser())
             userId = user.getActiveUser().id;;
-
+        var newScoreId = getNextScoreId(userId) + 1;
         var newScore = new Score({
-            id: -1, title: title, composer: composer,
-            score_img_path: score_img_path, year: year, numPages: numPages,
+            id: newScoreId, title: title, composer: composer,
+            score_img_path: score_img_path, Movement: Movement, numPages: numPages,
             userId: userId
         });
 
@@ -119,6 +134,7 @@ app.factory("userLibrary", function ($q, $http, $log, user) {
         //$http.post("https://my-json-server.typicode.com/nirch/recipe-book-v3/recipes", newRecipe).then.....
 
         scoresLibrary[userId].push(newScore);
+
         async.resolve(newScore);
 
         return async.promise;

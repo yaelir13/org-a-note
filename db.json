@@ -21,16 +21,16 @@
             "title": "Concerto No 1",
             "composer": "Bruch",
             "score_img_path": "images/Bruch-concerto_no_1.png",
-            "year": "1845",
+            "movement": "3",
             "numPages": 5,
             "userId": 1
         },
         {
             "id": "2",
-            "title": "Prelude in C Major",
+            "title": "Adagio",
             "composer": "J.S. Bach",
-            "score_img_path": "images/Bach-prelude-in-c-minor.png",
-            "year": "1865",
+            "score_img_path": "images/Bach-adagio.png",
+            "movement": "2",
             "numPages": 3,
             "userId": 1
         },
@@ -39,7 +39,7 @@
             "title": "Ave Maria",
             "composer": "J.S. Bach",
             "score_img_path": "images/Bach-ave_maria.png",
-            "year": "1865",
+            "movement": "1",
             "numPages": 3,
             "userId": 1
         },
@@ -48,7 +48,7 @@
             "title": "fur elise",
             "composer": "Ludwig van Bethoveen",
             "score_img_path": "images/bethoveen-fur_elise.png",
-            "year": "1865",
+            "movement": "1",
             "numPages":4,
             "userId": 1
         },
@@ -57,7 +57,16 @@
             "title": "Violin Concerto",
             "composer": "Khachaturian, Aram",
             "score_img_path": "images/Khachaturian-violin_concerto.jpg",
-            "year": "1940",
+            "movement": "3",
+            "numPages": 33,
+            "userId": 2
+        },
+        {
+            "id": "6",
+            "title": "Romance",
+            "composer": "Ludwig van Bethoveen",
+            "score_img_path": "images/Bethoveen - Romance.jpg",
+            "movement": "2",
             "numPages": 33,
             "userId": 2
         }

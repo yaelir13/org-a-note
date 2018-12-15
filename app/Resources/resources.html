@@ -1,1 +1,48 @@
-<div>Show resources</div>
+<navbar-scores></navbar-scores>
+<div class="bg-info mt-2">
+    <h3 class="display-8 text-center text-light mt-3 pt-4">Search IMSLP online Library</h3>
+    <nav class="navbar px-2 bg-info">
+        <form class="form-inline col-8 text-center px-3 ml-5">
+            <input class="form-control mx-md-6" type="search" placeholder="Search" ng-model="searchText" size="40"
+                aria-label="Search">
+        </form>
+    </nav>
+    <div class="row">
+        <div class="px-2 col-8">
+            <!-- <div infinite-scroll="myPagingFunction()" infinite-scroll-distance="3"></div> -->
+            <ul ng-class="container" class="px-2 ml-5" id="Score_library">
+                <li class="score-line row bg-light text-info rounded ml-4 mr-4 mt-2" ng-class="text-left" ng-click="addScore(result)"
+                    ng-repeat="result in IMSLPdatabase | filter: searchText">
+                    <div class="score-title card-body col-7 float-right">
+                        <h6 class="card-title font-weight-bold mt-1">{{result.Intvals[1]}}</h6>
+                        <p class="card-text">Composer: <span class="font-weight-bold">{{result.Intvals[0]}}</span></p>
+                    </div>
+                    <div class="col-4 float-right text-info my-auto text-right">
+                        <a class="display-6 text-info float-right" href="{{result.linkPDF}}"><i class="linkIMSLP float-right ml-2 col-1 text-info fas fa-link"></i>Link
+                            to complete score</a>
+                    </div>
+                </li>
+            </ul>
+            <br>
+        </div>
+        <div class="bg-info col-4">
+            <!-- <img class="img rounded mt-2" style="object-fit:cover;" src="images/bach-adagio.png" alt="Score preview"> -->
+            <!-- <div infinite-scroll="myPagingFunction()" infinite-scroll-distance="3"></div> -->
+            <ul ng-class="container" class="px-2" id="Score_library">
+                <li class="score-line row bg-light text-info rounded mr-4 mt-2" ng-class="text-left" ng-click="addScore(result)"
+                    ng-repeat="result in IMSLPdatabase | filter: searchText">
+                    <div class="score-title card-body col-7 float-right">
+                        <h6 class="card-title font-weight-bold mt-1">{{result.Intvals[1]}}</h6>
+                        <p class="card-text">Composer: <span class="font-weight-bold">{{result.Intvals[0]}}</span></p>
+                    </div>
+                    <div class="col-4 float-right text-info my-auto text-right">
+                        <a class="display-6 text-info float-right" href="{{result.linkPDF}}"><i class="linkIMSLP float-right ml-2 col-1 text-info fas fa-link"></i>Link
+                            to complete score</a>
+                    </div>
+                </li>
+            </ul>
+            <br>
+        </div>
+    </div>
+</div>
+<new-score-modal></new-score-modal>

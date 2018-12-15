@@ -11974,7 +11974,7 @@
             },
             "permlink": "http://imslp.org/wiki/12_Exercises_for_Cello,_Op.2_(Moja,_Leonardo)"
         },
-        "0": {
+        "1000": {
             "id": "''Little Sis'' Polka (Baylor, Eugene W.)",
             "type": "2",
             "parent": "Category:Baylor, Eugene W.",
@@ -11986,7 +11986,7 @@
             },
             "permlink": "http://imslp.org/wiki/''Little_Sis''_Polka_(Baylor,_Eugene_W.)"
         },
-        "1": {
+        "1001": {
             "id": "'4-4-8' Claves Quartet (Shannon, William R.)",
             "type": "2",
             "parent": "Category:Shannon, William R.",
@@ -11998,7 +11998,7 @@
             },
             "permlink": "http://imslp.org/wiki/'4-4-8'_Claves_Quartet_(Shannon,_William_R.)"
         },
-        "2": {
+        "1002": {
             "id": "'A bella d''e belle (Di Chiara, Vincenzo)",
             "type": "2",
             "parent": "Category:Di Chiara, Vincenzo",
@@ -12010,7 +12010,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_bella_d''e_belle_(Di_Chiara,_Vincenzo)"
         },
-        "3": {
+        "1003": {
             "id": "'A buscia (Taranto, Guido)",
             "type": "2",
             "parent": "Category:Taranto, Guido",
@@ -12022,7 +12022,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_buscia_(Taranto,_Guido)"
         },
-        "4": {
+        "1004": {
             "id": "'A cafettera (Albertin)",
             "type": "2",
             "parent": "Category:Albertin",
@@ -12034,7 +12034,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_cafettera_(Albertin)"
         },
-        "5": {
+        "1005": {
             "id": "'A cafettera (Segrè, Raffaele)",
             "type": "2",
             "parent": "Category:Segrè, Raffaele",
@@ -12046,7 +12046,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_cafettera_(Segrè,_Raffaele)"
         },
-        "6": {
+        "1006": {
             "id": "'A cafona (Fragna, Luigi)",
             "type": "2",
             "parent": "Category:Fragna, Luigi",
@@ -12058,7 +12058,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_cafona_(Fragna,_Luigi)"
         },
-        "7": {
+        "1007": {
             "id": "'A cagnacavalle (Albertin)",
             "type": "2",
             "parent": "Category:Albertin",
@@ -12070,7 +12070,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_cagnacavalle_(Albertin)"
         },
-        "8": {
+        "1008": {
             "id": "'A calamita (Von Calged, Kosta)",
             "type": "2",
             "parent": "Category:Von Calged, Kosta",
@@ -12082,7 +12082,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_calamita_(Von_Calged,_Kosta)"
         },
-        "9": {
+        "1009": {
             "id": "'A cammisa affatata (Valente, Vincenzo)",
             "type": "2",
             "parent": "Category:Valente, Vincenzo",
@@ -12094,7 +12094,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_cammisa_affatata_(Valente,_Vincenzo)"
         },
-        "10": {
+        "1010": {
             "id": "'A cammurrestella (Cangiullo, Francesco)",
             "type": "2",
             "parent": "Category:Cangiullo, Francesco",
@@ -12106,7 +12106,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_cammurrestella_(Cangiullo,_Francesco)"
         },
-        "11": {
+        "1011": {
             "id": "'A canzone d''e cucchiere (D'Arienzo, Nicola)",
             "type": "2",
             "parent": "Category:D'Arienzo, Nicola",
@@ -12118,7 +12118,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_canzone_d''e_cucchiere_(D'Arienzo,_Nicola)"
         },
-        "12": {
+        "1012": {
             "id": "'A capera (Liucci, Giacinto)",
             "type": "2",
             "parent": "Category:Liucci, Giacinto",
@@ -12130,7 +12130,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_capera_(Liucci,_Giacinto)"
         },
-        "13": {
+        "1013": {
             "id": "'A cartulina (Criscuolo, Luigi)",
             "type": "2",
             "parent": "Category:Criscuolo, Luigi",
@@ -12142,7 +12142,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_cartulina_(Criscuolo,_Luigi)"
         },
-        "14": {
+        "1014": {
             "id": "'A casa d''e fate (Sava, Raffaele)",
             "type": "2",
             "parent": "Category:Sava, Raffaele",
@@ -12154,7 +12154,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_casa_d''e_fate_(Sava,_Raffaele)"
         },
-        "15": {
+        "1015": {
             "id": "'A cchiù bella figliola! (De Curtis, Giambattista)",
             "type": "2",
             "parent": "Category:De Curtis, Giambattista",
@@ -12166,7 +12166,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_cchiù_bella_figliola!_(De_Curtis,_Giambattista)"
         },
-        "16": {
+        "1016": {
             "id": "'A chianchera (Berruti, Giuseppe)",
             "type": "2",
             "parent": "Category:Berruti, Giuseppe",
@@ -12178,7 +12178,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_chianchera_(Berruti,_Giuseppe)"
         },
-        "17": {
+        "1017": {
             "id": "'A chiava masculina!... (Musella, Roberto)",
             "type": "2",
             "parent": "Category:Musella, Roberto",
@@ -12190,7 +12190,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_chiava_masculina!..._(Musella,_Roberto)"
         },
-        "18": {
+        "1018": {
             "id": "'A chiavetella (Finamore, Francesco)",
             "type": "2",
             "parent": "Category:Finamore, Francesco",
@@ -12202,7 +12202,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_chiavetella_(Finamore,_Francesco)"
         },
-        "19": {
+        "1019": {
             "id": "'A chiena e 'a vacanta (Valente, Vincenzo)",
             "type": "2",
             "parent": "Category:Valente, Vincenzo",
@@ -12214,7 +12214,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_chiena_e_'a_vacanta_(Valente,_Vincenzo)"
         },
-        "20": {
+        "1020": {
             "id": "'A ciucculata (Di Chiara, Vincenzo)",
             "type": "2",
             "parent": "Category:Di Chiara, Vincenzo",
@@ -12226,9 +12226,9 @@
             },
             "permlink": "http://imslp.org/wiki/'A_ciucculata_(Di_Chiara,_Vincenzo)"
         },
-        "21": {
+        "1021": {
             "id": "'A cura 'e mammà (De Gregorio, Giuseppe)",
-            "type": "2",
+            "type": "102",
             "parent": "Category:De Gregorio, Giuseppe",
             "intvals": {
                 "composer": "De Gregorio, Giuseppe",
@@ -12238,7 +12238,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_cura_'e_mammà_(De_Gregorio,_Giuseppe)"
         },
-        "22": {
+        "1022": {
             "id": "'A farenara (Gramegna, Pasquale)",
             "type": "2",
             "parent": "Category:Gramegna, Pasquale",
@@ -12250,7 +12250,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_farenara_(Gramegna,_Pasquale)"
         },
-        "23": {
+        "1023": {
             "id": "'A femmena (Chiarolanza, Giuseppe)",
             "type": "2",
             "parent": "Category:Chiarolanza, Giuseppe",
@@ -12262,7 +12262,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_femmena_(Chiarolanza,_Giuseppe)"
         },
-        "24": {
+        "1024": {
             "id": "'A femmena (Taranto, Guido)",
             "type": "2",
             "parent": "Category:Taranto, Guido",
@@ -12274,7 +12274,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_femmena_(Taranto,_Guido)"
         },
-        "25": {
+        "1025": {
             "id": "'A festa d''e giglie (Gragnano, G.)",
             "type": "2",
             "parent": "Category:Gragnano, G.",
@@ -12286,7 +12286,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_festa_d''e_giglie_(Gragnano,_G.)"
         },
-        "26": {
+        "1026": {
             "id": "'A funicular''e Muntesanto (Caccavale, Giuseppe)",
             "type": "2",
             "parent": "Category:Caccavale, Giuseppe",
@@ -12298,7 +12298,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_funicular''e_Muntesanto_(Caccavale,_Giuseppe)"
         },
-        "27": {
+        "1027": {
             "id": "'A funiculare 'e Montesanto (D'Ambrosio, Francesco)",
             "type": "2",
             "parent": "Category:D'Ambrosio, Francesco",
@@ -12310,7 +12310,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_funiculare_'e_Montesanto_(D'Ambrosio,_Francesco)"
         },
-        "28": {
+        "1028": {
             "id": "'A gajola (Viscardi, Pasquale)",
             "type": "2",
             "parent": "Category:Viscardi, Pasquale",
@@ -12322,7 +12322,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_gajola_(Viscardi,_Pasquale)"
         },
-        "29": {
+        "1029": {
             "id": "'A gallaria nova (Mantegna, L.)",
             "type": "2",
             "parent": "Category:Mantegna, L.",
@@ -12334,7 +12334,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_gallaria_nova_(Mantegna,_L.)"
         },
-        "30": {
+        "1030": {
             "id": "'A gelosia (Nutile, Emmanuele)",
             "type": "2",
             "parent": "Category:Nutile, Emmanuele",
@@ -12346,7 +12346,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_gelosia_(Nutile,_Emmanuele)"
         },
-        "31": {
+        "1031": {
             "id": "'A giurnalista (Raimondi, Alfonso)",
             "type": "2",
             "parent": "Category:Raimondi, Alfonso",
@@ -12358,7 +12358,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_giurnalista_(Raimondi,_Alfonso)"
         },
-        "32": {
+        "1032": {
             "id": "'A grott'azzurra (Di Capua, Eduardo)",
             "type": "2",
             "parent": "Category:Di Capua, Eduardo",
@@ -12370,7 +12370,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_grott'azzurra_(Di_Capua,_Eduardo)"
         },
-        "33": {
+        "1033": {
             "id": "'A Grotta 'e Pozzulo (Nutile, Emmanuele)",
             "type": "2",
             "parent": "Category:Nutile, Emmanuele",
@@ -12382,7 +12382,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_Grotta_'e_Pozzulo_(Nutile,_Emmanuele)"
         },
-        "34": {
+        "1034": {
             "id": "'A lavannara (Siragusa, Antonio)",
             "type": "2",
             "parent": "Category:Siragusa, Antonio",
@@ -12394,7 +12394,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_lavannara_(Siragusa,_Antonio)"
         },
-        "35": {
+        "1035": {
             "id": "'A leggia d''o revolvere (Guida, Prospero)",
             "type": "2",
             "parent": "Category:Guida, Prospero",
@@ -12406,7 +12406,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_leggia_d''o_revolvere_(Guida,_Prospero)"
         },
-        "36": {
+        "1036": {
             "id": "'A limonata (Anatra, Emilio)",
             "type": "2",
             "parent": "Category:Anatra, Emilio",
@@ -12418,7 +12418,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_limonata_(Anatra,_Emilio)"
         },
-        "37": {
+        "1037": {
             "id": "'A luntananza (Di Capua, Eduardo)",
             "type": "2",
             "parent": "Category:Di Capua, Eduardo",
@@ -12430,7 +12430,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_luntananza_(Di_Capua,_Eduardo)"
         },
-        "38": {
+        "1038": {
             "id": "'A maestrina (Albertin)",
             "type": "2",
             "parent": "Category:Albertin",
@@ -12442,7 +12442,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_maestrina_(Albertin)"
         },
-        "39": {
+        "1039": {
             "id": "'A Margarita (Caccavale, Giuseppe)",
             "type": "2",
             "parent": "Category:Caccavale, Giuseppe",
@@ -12454,7 +12454,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_Margarita_(Caccavale,_Giuseppe)"
         },
-        "40": {
+        "1040": {
             "id": "'A maruzza (Marino, Carmine)",
             "type": "2",
             "parent": "Category:Marino, Carmine",
@@ -12466,7 +12466,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_maruzza_(Marino,_Carmine)"
         },
-        "41": {
+        "1041": {
             "id": "'A mmaretata (Erra, Arturo)",
             "type": "2",
             "parent": "Category:Erra, Arturo",
@@ -12478,7 +12478,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_mmaretata_(Erra,_Arturo)"
         },
-        "42": {
+        "1042": {
             "id": "'A mpignatora (Cavuoto, Antonio)",
             "type": "2",
             "parent": "Category:Cavuoto, Antonio",
@@ -12490,7 +12490,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_mpignatora_(Cavuoto,_Antonio)"
         },
-        "43": {
+        "1043": {
             "id": "'A mugliera ca primm''e spusà!! (Di Capua, Eduardo)",
             "type": "2",
             "parent": "Category:Di Capua, Eduardo",
@@ -12502,7 +12502,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_mugliera_ca_primm''e_spusà!!_(Di_Capua,_Eduardo)"
         },
-        "44": {
+        "1044": {
             "id": "'A Napulitana (Costa, Pasquale Mario)",
             "type": "2",
             "parent": "Category:Costa, Pasquale Mario",
@@ -12514,7 +12514,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_Napulitana_(Costa,_Pasquale_Mario)"
         },
-        "45": {
+        "1045": {
             "id": "'A nepota 'e don Camillo (Taranto, Guido)",
             "type": "2",
             "parent": "Category:Taranto, Guido",
@@ -12526,7 +12526,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_nepota_'e_don_Camillo_(Taranto,_Guido)"
         },
-        "46": {
+        "1046": {
             "id": "'A neve 'a ne'! (Miccio, Emanuele)",
             "type": "2",
             "parent": "Category:Miccio, Emanuele",
@@ -12538,7 +12538,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_neve_'a_ne'!_(Miccio,_Emanuele)"
         },
-        "47": {
+        "1047": {
             "id": "'A nzalatara (Fulvio, Mario)",
             "type": "2",
             "parent": "Category:Fulvio, Mario",
@@ -12550,7 +12550,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_nzalatara_(Fulvio,_Mario)"
         },
-        "48": {
+        "1048": {
             "id": "'A panettera (Fragna, Luigi)",
             "type": "2",
             "parent": "Category:Fragna, Luigi",
@@ -12562,7 +12562,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_panettera_(Fragna,_Luigi)"
         },
-        "49": {
+        "1049": {
             "id": "'A partenza d''e cungedate (Gambardella, Salvatore)",
             "type": "2",
             "parent": "Category:Gambardella, Salvatore",
@@ -12574,7 +12574,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_partenza_d''e_cungedate_(Gambardella,_Salvatore)"
         },
-        "50": {
+        "1050": {
             "id": "'A partenza d''e marenare (Fanti, Carlo)",
             "type": "2",
             "parent": "Category:Fanti, Carlo",
@@ -12586,7 +12586,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_partenza_d''e_marenare_(Fanti,_Carlo)"
         },
-        "51": {
+        "1051": {
             "id": "'A passione (De Angelis, G.)",
             "type": "2",
             "parent": "Category:De Angelis, G.",
@@ -12598,7 +12598,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_passione_(De_Angelis,_G.)"
         },
-        "52": {
+        "1052": {
             "id": "'A passione (Giannelli, Giuseppe)",
             "type": "2",
             "parent": "Category:Giannelli, Giuseppe",
@@ -12610,7 +12610,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_passione_(Giannelli,_Giuseppe)"
         },
-        "53": {
+        "1053": {
             "id": "'A pazzagliona (Pennino, Francesco)",
             "type": "2",
             "parent": "Category:Pennino, Francesco",
@@ -12622,7 +12622,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_pazzagliona_(Pennino,_Francesco)"
         },
-        "54": {
+        "1054": {
             "id": "'A pazziella (Chiarolanza, Giuseppe)",
             "type": "2",
             "parent": "Category:Chiarolanza, Giuseppe",
@@ -12630,11 +12630,11 @@
                 "composer": "Chiarolanza, Giuseppe",
                 "worktitle": "'A pazziella",
                 "icatno": "IGC 2",
-                "pageid": "592072"
+                "pageid": "10592072"
             },
             "permlink": "http://imslp.org/wiki/'A_pazziella_(Chiarolanza,_Giuseppe)"
         },
-        "55": {
+        "1055": {
             "id": "'A penitente e 'o Confessore (Fonzo, Pasquale Ernesto)",
             "type": "2",
             "parent": "Category:Fonzo, Pasquale Ernesto",
@@ -12642,11 +12642,11 @@
                 "composer": "Fonzo, Pasquale Ernesto",
                 "worktitle": "'A penitente e 'o Confessore",
                 "icatno": "IPF 1",
-                "pageid": "599981"
+                "pageid": "10599981"
             },
             "permlink": "http://imslp.org/wiki/'A_penitente_e_'o_Confessore_(Fonzo,_Pasquale_Ernesto)"
         },
-        "56": {
+        "1056": {
             "id": "'A pippa (Tinto, Giuseppe)",
             "type": "2",
             "parent": "Category:Tinto, Giuseppe",
@@ -12654,11 +12654,11 @@
                 "composer": "Tinto, Giuseppe",
                 "worktitle": "'A pippa",
                 "icatno": "IGT 1",
-                "pageid": "593236"
+                "pageid": "10593236"
             },
             "permlink": "http://imslp.org/wiki/'A_pippa_(Tinto,_Giuseppe)"
         },
-        "57": {
+        "1057": {
             "id": "'A pizzaria 'e don Saveratore (Valente, Vincenzo)",
             "type": "2",
             "parent": "Category:Valente, Vincenzo",
@@ -12670,7 +12670,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_pizzaria_'e_don_Saveratore_(Valente,_Vincenzo)"
         },
-        "58": {
+        "1058": {
             "id": "'A ponta 'e Pusilleco (De Gregorio, Giuseppe)",
             "type": "2",
             "parent": "Category:De Gregorio, Giuseppe",
@@ -12682,7 +12682,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_ponta_'e_Pusilleco_(De_Gregorio,_Giuseppe)"
         },
-        "59": {
+        "1059": {
             "id": "'A primma donna (Valente, Vincenzo)",
             "type": "2",
             "parent": "Category:Valente, Vincenzo",
@@ -12694,7 +12694,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_primma_donna_(Valente,_Vincenzo)"
         },
-        "60": {
+        "1060": {
             "id": "'A primma vota! (De Curtis, Ernesto)",
             "type": "2",
             "parent": "Category:De Curtis, Ernesto",
@@ -12706,7 +12706,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_primma_vota!_(De_Curtis,_Ernesto)"
         },
-        "61": {
+        "1061": {
             "id": "'A prucitana (Flocco, Alfredo)",
             "type": "2",
             "parent": "Category:Flocco, Alfredo",
@@ -12718,7 +12718,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_prucitana_(Flocco,_Alfredo)"
         },
-        "62": {
+        "1062": {
             "id": "'A Retirata (Costa, Pasquale Mario)",
             "type": "2",
             "parent": "Category:Costa, Pasquale Mario",
@@ -12730,7 +12730,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_Retirata_(Costa,_Pasquale_Mario)"
         },
-        "63": {
+        "1063": {
             "id": "'A retirata d''a fanteria (Gambardella, Salvatore)",
             "type": "2",
             "parent": "Category:Gambardella, Salvatore",
@@ -12742,7 +12742,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_retirata_d''a_fanteria_(Gambardella,_Salvatore)"
         },
-        "64": {
+        "1064": {
             "id": "'A revista (Corvino, Gennaro)",
             "type": "2",
             "parent": "Category:Corvino, Gennaro",
@@ -12754,7 +12754,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_revista_(Corvino,_Gennaro)"
         },
-        "65": {
+        "1065": {
             "id": "'A revista navale (Galiani, Celestino)",
             "type": "2",
             "parent": "Category:Galiani, Celestino",
@@ -12766,7 +12766,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_revista_navale_(Galiani,_Celestino)"
         },
-        "66": {
+        "1066": {
             "id": "'A riggina d''o mare (Bellini, Ettore)",
             "type": "2",
             "parent": "Category:Bellini, Ettore",
@@ -12778,7 +12778,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_riggina_d''o_mare_(Bellini,_Ettore)"
         },
-        "67": {
+        "1067": {
             "id": "'A risa (Cantalamessa, Berardo)",
             "type": "2",
             "parent": "Category:Cantalamessa, Berardo",
@@ -12790,7 +12790,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_risa_(Cantalamessa,_Berardo)"
         },
-        "68": {
+        "1068": {
             "id": "'A robba fina! (Di Capua, Eduardo)",
             "type": "2",
             "parent": "Category:Di Capua, Eduardo",
@@ -12802,7 +12802,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_robba_fina!_(Di_Capua,_Eduardo)"
         },
-        "69": {
+        "1069": {
             "id": "'A rosa (Natale, Antonio)",
             "type": "2",
             "parent": "Category:Natale, Antonio",
@@ -12814,7 +12814,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_rosa_(Natale,_Antonio)"
         },
-        "70": {
+        "1070": {
             "id": "'A schiavuttella (De Caro, Donato)",
             "type": "2",
             "parent": "Category:De Caro, Donato",
@@ -12826,7 +12826,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_schiavuttella_(De_Caro,_Donato)"
         },
-        "71": {
+        "1071": {
             "id": "'A sciurara (Albin, Federico)",
             "type": "2",
             "parent": "Category:Albin, Federico",
@@ -12838,7 +12838,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_sciurara_(Albin,_Federico)"
         },
-        "72": {
+        "1072": {
             "id": "'A scossa elettrica! (De Angelis, Michele)",
             "type": "2",
             "parent": "Category:De Angelis, Michele",
@@ -12850,7 +12850,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_scossa_elettrica!_(De_Angelis,_Michele)"
         },
-        "73": {
+        "1073": {
             "id": "'A sentenza mia (Guida, Prospero)",
             "type": "2",
             "parent": "Category:Guida, Prospero",
@@ -12862,7 +12862,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_sentenza_mia_(Guida,_Prospero)"
         },
-        "74": {
+        "1074": {
             "id": "'A serata d''a primma donna (Vottis, Gaetano)",
             "type": "2",
             "parent": "Category:Vottis, Gaetano",
@@ -12874,7 +12874,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_serata_d''a_primma_donna_(Vottis,_Gaetano)"
         },
-        "75": {
+        "1075": {
             "id": "'A serenata d''e nnammurate (Di Capua, Eduardo)",
             "type": "2",
             "parent": "Category:Di Capua, Eduardo",
@@ -12886,7 +12886,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_serenata_d''e_nnammurate_(Di_Capua,_Eduardo)"
         },
-        "76": {
+        "1076": {
             "id": "'A serenata d''e rrose (Di Capua, Eduardo)",
             "type": "2",
             "parent": "Category:Di Capua, Eduardo",
@@ -12898,7 +12898,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_serenata_d''e_rrose_(Di_Capua,_Eduardo)"
         },
-        "77": {
+        "1077": {
             "id": "'A serenata d''o 'mbriaco (Fragna, Luigi)",
             "type": "2",
             "parent": "Category:Fragna, Luigi",
@@ -12910,7 +12910,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_serenata_d''o_'mbriaco_(Fragna,_Luigi)"
         },
-        "78": {
+        "1078": {
             "id": "'A sicilianella (Di Fraja, Vincenzo)",
             "type": "2",
             "parent": "Category:Di Fraja, Vincenzo",
@@ -12934,7 +12934,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_sicilianella_(Fonzo,_Pasquale_Ernesto)"
         },
-        "80": {
+        "1080": {
             "id": "'A spartenza (De Gregorio, Giuseppe)",
             "type": "2",
             "parent": "Category:De Gregorio, Giuseppe",
@@ -12946,7 +12946,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_spartenza_(De_Gregorio,_Giuseppe)"
         },
-        "81": {
+        "1081": {
             "id": "'A spartenza (Niola, Olimpia)",
             "type": "2",
             "parent": "Category:Niola, Olimpia",
@@ -12958,7 +12958,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_spartenza_(Niola,_Olimpia)"
         },
-        "82": {
+        "1082": {
             "id": "'A spatella (Finamore, Francesco)",
             "type": "2",
             "parent": "Category:Finamore, Francesco",
@@ -12970,7 +12970,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_spatella_(Finamore,_Francesco)"
         },
-        "83": {
+        "1083": {
             "id": "'A spicajola (Gaudiosi, Gennaro)",
             "type": "2",
             "parent": "Category:Gaudiosi, Gennaro",
@@ -12982,7 +12982,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_spicajola_(Gaudiosi,_Gennaro)"
         },
-        "84": {
+        "1084": {
             "id": "'A spicajola da festa (Capurro, Francesco)",
             "type": "2",
             "parent": "Category:Capurro, Francesco",
@@ -12994,7 +12994,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_spicajola_da_festa_(Capurro,_Francesco)"
         },
-        "85": {
+        "1085": {
             "id": "'A sprinia (De Angelis, Michele)",
             "type": "2",
             "parent": "Category:De Angelis, Michele",
@@ -13006,7 +13006,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_sprinia_(De_Angelis,_Michele)"
         },
-        "86": {
+        "1086": {
             "id": "'A testa 'aruta (Valente, Vincenzo)",
             "type": "2",
             "parent": "Category:Valente, Vincenzo",
@@ -13018,7 +13018,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_testa_'aruta_(Valente,_Vincenzo)"
         },
-        "87": {
+        "1087": {
             "id": "'A tossa (Di Chiara, Vincenzo)",
             "type": "2",
             "parent": "Category:Di Chiara, Vincenzo",
@@ -13030,7 +13030,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_tossa_(Di_Chiara,_Vincenzo)"
         },
-        "88": {
+        "1088": {
             "id": "'A valanza (Ranieri, Enrico)",
             "type": "2",
             "parent": "Category:Ranieri, Enrico",
@@ -13054,7 +13054,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_vedova!_(De_Gregorio,_Giuseppe)"
         },
-        "90": {
+        "1090": {
             "id": "'A verdummara (Siragusa, Antonio)",
             "type": "2",
             "parent": "Category:Siragusa, Antonio",
@@ -13066,7 +13066,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_verdummara_(Siragusa,_Antonio)"
         },
-        "91": {
+        "1091": {
             "id": "'A vesta nera (Imperiali, Enrico)",
             "type": "2",
             "parent": "Category:Imperiali, Enrico",
@@ -13078,7 +13078,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_vesta_nera_(Imperiali,_Enrico)"
         },
-        "92": {
+        "1092": {
             "id": "'A vigilia 'e Natale (De Curtis, Giambattista)",
             "type": "2",
             "parent": "Category:De Curtis, Giambattista",
@@ -13090,7 +13090,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_vigilia_'e_Natale_(De_Curtis,_Giambattista)"
         },
-        "93": {
+        "1093": {
             "id": "'A vigna 'e Catarina (Valente, Nicola)",
             "type": "2",
             "parent": "Category:Valente, Nicola",
@@ -13102,7 +13102,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_vigna_'e_Catarina_(Valente,_Nicola)"
         },
-        "94": {
+        "1094": {
             "id": "'A vita è nu suonno! (Gambardella, Salvatore)",
             "type": "2",
             "parent": "Category:Gambardella, Salvatore",
@@ -13114,7 +13114,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_vita_è_nu_suonno!_(Gambardella,_Salvatore)"
         },
-        "95": {
+        "1095": {
             "id": "'A vivandiera (Siragusa, Antonio)",
             "type": "2",
             "parent": "Category:Siragusa, Antonio",
@@ -13126,7 +13126,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_vivandiera_(Siragusa,_Antonio)"
         },
-        "96": {
+        "1096": {
             "id": "'A vongola (Di Chiara, Vincenzo)",
             "type": "2",
             "parent": "Category:Di Chiara, Vincenzo",
@@ -13138,7 +13138,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_vongola_(Di_Chiara,_Vincenzo)"
         },
-        "97": {
+        "1097": {
             "id": "'A zetella (Erra, Arturo)",
             "type": "2",
             "parent": "Category:Erra, Arturo",
@@ -13150,7 +13150,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A_zetella_(Erra,_Arturo)"
         },
-        "98": {
+        "1098": {
             "id": "'A' for Solo FM Synthesizer (Shannon, William R.)",
             "type": "2",
             "parent": "Category:Shannon, William R.",
@@ -13162,7 +13162,7 @@
             },
             "permlink": "http://imslp.org/wiki/'A'_for_Solo_FM_Synthesizer_(Shannon,_William_R.)"
         },
-        "99": {
+        "1099": {
             "id": "'Anna Bolena' fantaisie, Op.204 (Leduc, Alphonse)",
             "type": "2",
             "parent": "Category:Leduc, Alphonse",
@@ -13174,7 +13174,7 @@
             },
             "permlink": "http://imslp.org/wiki/'Anna_Bolena'_fantaisie,_Op.204_(Leduc,_Alphonse)"
         },
-        "100": {
+        "1100": {
             "id": "'Au printemps' de Gounod, Op.174 (Leybach, Ignace Xavier Joseph)",
             "type": "2",
             "parent": "Category:Leybach, Ignace Xavier Joseph",

@@ -20,7 +20,6 @@ app.controller("loginModalCtrl", function($scope, $location, user) {
         $scope.invalidLogin = false;
         user.login($scope.username, $scope.pwd).then(function() {
             // success login
-            console.log("activeUser", $scope.activeUser);
             $location.path("/scores")
         }, function(error) {
             // failed login

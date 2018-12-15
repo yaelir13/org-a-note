@@ -3,10 +3,9 @@
     <h3 class="display-8 text-center text-light mt-3 pt-4">My Digital Repertoire</h3>
     <nav class="navbar bg-info mx-auto">
         <button class="round-btn plus fas fa-plus-circle ml-5" data-toggle="modal" data-target="#newModal" href="#"></button>
-        <form class="form-inline col-6 text-center mx-auto">
-            <input class="form-control mx-md-4" type="search" placeholder="Search" ng-model="searchText" size="40"
+        <form class="form-inline col-10 text-center mx-auto">
+            <input class="form-control mx-md-6" type="search" placeholder="Search" ng-model="searchText" size="40"
                 aria-label="Search">
-            <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
         </form>
     </nav>
     <div>
@@ -25,7 +24,6 @@
                 </div>
                 <div class="col-3 float-right text-info my-auto text-right">
                     <a href="#!/annotate/{{result.id}}" ng-click="loadImage(result.preview)"><i class="pencil text-info fas fa-pencil-alt"></i></a>
-                    <!-- <a href="#!/annotate/{{result}}" ng-click="loadImage(result.preview)"><i class="pencil text-info fas fa-pencil-alt"></i></a> -->
                 </div>
             </li>
         </ul>

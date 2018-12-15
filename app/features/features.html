@@ -1,9 +1,9 @@
 <navbar-scores></navbar-scores>
 <div class="jumbotron jumbotron-fluid bg-info text-center text-white mt-2">
     <div class="container ">
-        <h2 class="text-white text-center mb-1 text-bold"> Welcome Aboard Org-a-Note</h1>
+        <h1 class="text-white text-center mb-1 text-bold"> Welcome Aboard Org-a-Note</h1>
             <div class="display-4 inline mt-1" ng-bind="activeUser"></div>
-            <h5 class="text-white text-center text-bold">Wether you want to digitize your entire repertoire, or just
+            <h5 class="text-white text-center text-bold">Whether you want to digitize your entire repertoire, or just
                 Search & sort it</h5>
             <h5 class="text-white text-center text-bold">you'll enjoy these amazing features</h5>
 
@@ -11,11 +11,11 @@
                 <div class="text-left mt-5">
                     <div class="feature text-center col-3 ml-5 mr-4">
                         <p col-2>Upload</p>
-                        <a href="#!/scores"><i class="fas fa-upload"></i></a>
+                        <a href="#" onclick="return yes_js_login();"><i class="fas fa-upload"></i></a>
                     </div>
                     <div class="feature text-center col-3 mr-4">
                         <p col-2>Search</p>
-                        <a href="#!/scores"><i class="fas fa-search"></i></a>
+                        <a href="#!/resources"><i class="fas fa-search"></i></a>
                     </div>
                     <div class="feature text-center col-3">
                         <p col-2>Share</p>
@@ -23,22 +23,24 @@
                     </div>
                     <br>
                     <br>
+                    <br>
+                    <br>
                     <div class="feature text-center col-3 ml-5 mr-4">
                         <p col-2>Collaborate</p>
-                        <i class="fas fa-grip-horizontal"></i>
+                        <a href="#" onclick="return yes_js_login();"></a><i class="fas fa-grip-horizontal"></i></a>
                     </div>
                     <div class="feature text-center col-3 mr-4">
                         <p col-2>Schedule</p>
-                        <i class="fas fa-calendar-alt"></i>
+                        <a href="#" onclick="return yes_js_login();"><i class="fas fa-calendar-alt"></i></a>
                     </div>
                     <div class="feature text-center col-3">
                         <p col-2>Annotate</p>
-                        <a href="#!/scores"><i class="fas fa-pencil-alt"></i></a>
+                        <a href="#!/scores" onclick="return yes_js_login();"><i class="fas fa-pencil-alt"></i></a>
                     </div>
                 </div>
             </div>
     </div>
 </div>
-<div class="footer">
-
+<div id="img-wrapper">
+    <img class="footer-img" src="app/home/homepage_footer_img.png">
 </div>

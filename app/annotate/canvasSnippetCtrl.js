@@ -1,4 +1,4 @@
-app.controller("canvasCtrl", function ($scope, $log, $routeParams, userLibrary) {
+app.controller("canvasCtrl", function ($scope, $log, $routeParams, $location, userLibrary) {
 
     // size of drawing and its starting background colour
     const drawingInfo = {
@@ -249,31 +249,15 @@ app.controller("canvasCtrl", function ($scope, $log, $routeParams, userLibrary) 
             }
             else i += 1;
         }
+        //score preview should be 370x480 for optimal viewing
+
+        // resizeScoreImage($scope.preview) 
         loadImage($scope.preview);
     })
 
-    // function toDataURL(url, callback) {
-    //     var httpRequest = new XMLHttpRequest();
-    //     httpRequest.onload = function () {
-    //         var fileReader = new FileReader();
-    //         fileReader.onloadend = function () {
-    //             callback(fileReader.result);
-    //         }
-    //         fileReader.readAsDataURL(httpRequest.response);
-    //     };
-    //     httpRequest.open('GET', url);
-    //     httpRequest.responseType = 'blob';
-    //     httpRequest.send();
+    // function resizeScoreImage(url) {
+
     // }
-    // toDataURL('$scope.preview', function (dataUrl) {
-    //     document.write('Result in string:', dataUrl)
-    // })
-
-
-    /* load and add image to the drawing. It may take time to load. */
-  
-    //     image.onload = draw();
-
 
     function loadImage(url) {
         const image = new Image();
@@ -288,11 +272,32 @@ app.controller("canvasCtrl", function ($scope, $log, $routeParams, userLibrary) 
 
     }
 
+    function updatePreviewInLibrary(userId, image) {
+        userLibrary.getActiveUserLibrary().then(function (scoresLibrary) {
+            $scope.scoresLibrary = scoresLibrary;
+            var notFound = true;
+            var i = 0;
+            while (notFound) {
+                if ($scope.scoresLibrary[i].id == userId) {
+                    
+                    // base64Img=image.replace("data:image/octet-stream;base64,","");
+                    // $log.log(base64Img)
+                    // var decodedImage = atob(base64Img);
+                    // $log.log(decodedImage);
+                    // $scope.scoresLibrary[i].preview = decodedImage;
+                    $scope.scoresLibrary[i].preview=image;
+                    notFound = false;
+                }
+                else i += 1;
+            }
+        })
+        $location.path("/scores");
+    }
+
     $scope.to_image = function () {
         var can = document.getElementById("can");
         var image = can.toDataURL("image/png").replace("image/png", "image/octet-stream");  // here is the most important part because if you dont replace you will get a DOM 18 exception.
         window.location.href = image;
-        $scope.updatedScore = image;
-        $log.log($scope.updatedScore); // it will save locally
+        updatePreviewInLibrary($scope.imgID, image);
     }
 })

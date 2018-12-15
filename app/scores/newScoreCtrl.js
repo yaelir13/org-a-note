@@ -9,7 +9,10 @@ app.controller("newScoreCtrl", function ($scope, userLibrary, $location, user, u
 
     $scope.createScore = function () {
         userLibrary.createScore($scope.title, $scope.composer,
-            $scope.filepreview, $scope.year, $scope.numPages).then(function () {
+            $scope.filepreview, $scope.movement, $scope.numPages).then(function () {
+                $('#newModal').modal('hide');
+                $('body').removeClass('modal-open');
+                $('.modal-backdrop').remove();
                 $location.path("/scores")
             }, function (err) {
                 console.log(err);
@@ -23,6 +26,7 @@ app.controller("newScoreCtrl", function ($scope, userLibrary, $location, user, u
 
         uploadService.upload(newfile).then(function (res) {
             // DO SOMETHING WITH THE RESULT!
+            // oldfile=newfile;
             console.log("result", res);
         })
     });

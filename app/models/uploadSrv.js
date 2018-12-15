@@ -7,7 +7,7 @@ app.factory("uploadService", function($http, $q) {
     function upload(file) {
       var upl = $http({
         method: 'POST',
-        url: 'https://jsonplaceholder.typicode.com/posts', // /api/upload
+        url: "https://cors-anywhere.herokuapp.com/" + 'https://jsonplaceholder.typicode.com/posts', // /api/upload
         headers: {
           'Content-Type': 'multipart/form-data'
         },

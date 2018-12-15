@@ -3,13 +3,6 @@ app.factory("userLibrary", function ($q, $http, $log, user) {
     var scoresLibrary = {};
     var wasEverLoaded = [0];
 
-    // while (i != 0) {
-    //     wasEverLoaded[i] = [false];
-    //     i += 1;
-    // }
-
-    // wasEverLoaded[1] = false;
-
     function Score(musicScore) {
         this.id = musicScore.id;
         this.title = musicScore.title;
@@ -19,29 +12,13 @@ app.factory("userLibrary", function ($q, $http, $log, user) {
         this.numPages = musicScore.numPages;
         this.userId = musicScore.userId;
     }
-   
+
     function IMSLP(musicScore) {
         this.id = musicScore.id;
         this.Intvals = Object.values(musicScore.intvals);
         this.permlink = musicScore.permlink;
         this.linkPDF = "https://imslp.org//wiki//" + musicScore.id;
     }
-    // var scoreArr = [];
-    // scoreArr=Object.keys(Intvals);
-    // $log.log(scoreArr);
-
-    // IMSLP.prototype.intvals={
-    //         composer: Intvals.composer,
-    //         worktitle: worktitle,
-    //         icanto: icanto,
-    //         pageid: pageid
-    // }
-
-    // this.composer = musicScore.composer;
-    // this.worktitle = musicScore.worktitle;
-    // this.icanto = musicScore.icanto;
-    // this.pageid = musicScore.pageid;
-
 
     function getActiveUserLibrary() {
 
@@ -78,7 +55,7 @@ app.factory("userLibrary", function ($q, $http, $log, user) {
 
     var scoresPath = '';
     var IMSLPdatabasePage = [];
-    
+
 
     function getIMSLPLibrary() {
 
@@ -88,13 +65,11 @@ app.factory("userLibrary", function ($q, $http, $log, user) {
         // So that all scores are received only once.
         // for (var i = 0; i < 141000; i++) {
         // scoresPath[i] = "https://imslp.org/imslpscripts/API.ISCR.php?account=worklist/disclaimer=accepted/sort=id/type=2/start=" + i + "/";
-        // scoresPath[0] = "https://imslp.org/imslpscripts/API.ISCR.php?account=worklist/disclaimer=accepted/sort=id/type=2/start=0/";
-        // CORSscoresPath = "https://cors-anywhere.herokuapp.com/" + scoresPath[0];
-        var scoresPath = "https://my-json-server.typicode.com/yaelir13/org-a-note/IMSLP;
-        // $http.get(CORSscoresPath).then(function (response) {
-            $http.get(scoresPath).then(function (response) {
-            for (var i = 0; i < response.data.length; i++) {
-
+        scoresPath = "https://imslp.org/imslpscripts/API.ISCR.php?account=worklist/disclaimer=accepted/sort=id/type=2/start=1/";
+        var CORSscoresPath = "https://cors-anywhere.herokuapp.com/" + scoresPath;
+        $http.get(CORSscoresPath).then(function (response) {
+            // // $http.get("IMSLP.json").then(function (response) {
+            for (var i = 0; i < 1000; i++) {
                 var score = new IMSLP(response.data[i]);
                 IMSLPdatabasePage.push(score);
             }
@@ -104,12 +79,10 @@ app.factory("userLibrary", function ($q, $http, $log, user) {
             async.reject(error);
         });
 
-        // IMSLPdatabase.push(IMSLPdatabasePage);
-        // return IMSLPdatabase;
-        // }
-
         return async.promise;
     }
+
+
     var ScoreId = "";
     function getNextScoreId(userId) {
         getActiveUserLibrary().then(function (scoresLibrary) {

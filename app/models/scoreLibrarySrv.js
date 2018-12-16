@@ -21,7 +21,6 @@ app.factory("userLibrary", function ($q, $http, $log, user) {
     }
 
     function getActiveUserLibrary() {
-
         var async = $q.defer();
         var userId;
         if (user.getActiveUser())
@@ -60,12 +59,12 @@ app.factory("userLibrary", function ($q, $http, $log, user) {
     function getIMSLPLibrary() {
 
         var async = $q.defer();
-
+        debugger;
         // This is a hack since we don't really have a persistant server.
         // So that all scores are received only once.
         // for (var i = 0; i < 141000; i++) {
         // scoresPath[i] = "https://imslp.org/imslpscripts/API.ISCR.php?account=worklist/disclaimer=accepted/sort=id/type=2/start=" + i + "/";
-        scoresPath = "https://imslp.org/imslpscripts/API.ISCR.php?account=worklist/disclaimer=accepted/sort=id/type=2/start=1/";
+        scoresPath = "https://imslp.org/imslpscripts/API.ISCR.php?account=worklist/disclaimer=accepted/sort=id/type=2/start=5/";
         var CORSscoresPath = "https://cors-anywhere.herokuapp.com/" + scoresPath;
         $http.get(CORSscoresPath).then(function (response) {
             // // $http.get("IMSLP.json").then(function (response) {
@@ -85,30 +84,36 @@ app.factory("userLibrary", function ($q, $http, $log, user) {
 
     var ScoreId = "";
     function getNextScoreId(userId) {
+        var async = $q.defer();
         getActiveUserLibrary().then(function (scoresLibrary) {
+            // for (key in scoresLibrary)
+            //     ScoreId = scoresLibrary[userId][scoresLibrary[userId].length - 1].id;
             var lastArrItem = scoresLibrary[scoresLibrary.length - 1];
-            ScoreId = lastArrItem.id;
+            ScoreId = parseInt(lastArrItem.id)+1;
+            async.resolve(ScoreId);
         })
-        return ScoreId;
+        return async.promise;
     }
 
     function createScore(title, composer, score_img_path, Movement, numPages) {
         var async = $q.defer();
         if (user.getActiveUser())
-            userId = user.getActiveUser().id;;
-        var newScoreId = getNextScoreId(userId) + 1;
-        var newScore = new Score({
-            id: newScoreId, title: title, composer: composer,
-            score_img_path: score_img_path, Movement: Movement, numPages: numPages,
-            userId: userId
+            userId = user.getActiveUser().id;
+            getNextScoreId(userId).then(function (newScoreId) {
+            var newScore = new Score({
+                id: newScoreId, title: title, composer: composer,
+                score_img_path: score_img_path, Movement: Movement, numPages: numPages,
+                userId: userId
+            });
+
+            // if working with real server:
+            //$http.post("https://my-json-server.typicode.com/nirch/recipe-book-v3/recipes", newRecipe).then.....
+
+            scoresLibrary[userId].push(newScore);
+            $log.log(scoresLibrary[userId]);
+
+            async.resolve(newScore);
         });
-
-        // if working with real server:
-        //$http.post("https://my-json-server.typicode.com/nirch/recipe-book-v3/recipes", newRecipe).then.....
-
-        scoresLibrary[userId].push(newScore);
-
-        async.resolve(newScore);
 
         return async.promise;
     }
@@ -116,7 +121,8 @@ app.factory("userLibrary", function ($q, $http, $log, user) {
     return {
         getActiveUserLibrary: getActiveUserLibrary,
         createScore: createScore,
-        getIMSLPLibrary: getIMSLPLibrary
+        getIMSLPLibrary: getIMSLPLibrary,
+        getNextScoreId: getNextScoreId
     }
 
 })

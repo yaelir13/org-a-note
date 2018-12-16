@@ -9,7 +9,7 @@
             </div>
             <div class="modal-body">
                 <div class="col-md-12 col-md-offset-3">
-                    <a id="login-with-facebook" href="https://www.facebook.com" data-network="Facebook" class="button social-account-button facebook-button button-fullwidth">
+                    <a id="login-with-facebook" href="https://www.facebook.com" data-network="Facebook" class="btn social-account-button facebook-button button-fullwidth">
                         <i class="fab fa-facebook mr-3"></i>
                         <span>Sign Up with Facebook</span>
                     </a>
@@ -40,14 +40,14 @@
                         </div>
                         <div class="form-group" ng-class="{ 'has-error': form.username.$dirty && form.username.$error.required }">
                             <label for="username">Username</label>
-                            <input type="text" name="username" id="username" class="form-control" ng-model="username"
+                            <input type="text" name="username" id="username" autocomplete="username" class="form-control" ng-model="username"
                                 required />
                             <span ng-show="form.username.$dirty && form.username.$error.required" class="help-block">Username
                                 is required</span>
                         </div>
                         <div class="form-group" ng-class="{ 'has-error': form.password.$dirty && form.password.$error.required }">
                             <label for="password">Password</label>
-                            <input type="password" name="password" id="password" class="form-control" ng-model="pwd"
+                            <input type="password" name="password" id="password" class="form-control" autocomplete="current-password" ng-model="pwd"
                                 required="required" />
                             <span ng-show="form.password.$dirty && form.password.$error.required" class="help-block">Password
                                 is required</span>

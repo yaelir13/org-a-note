@@ -4,7 +4,7 @@ app.controller("signupCtrl", function ($scope, user, $location, $log, $rootScope
         user.createUser($scope.fname, $scope.lname,
             $scope.username, $scope.pwd).then(function (user) {
                 $rootScope.activeUser = user.fname;
-                $scope.isLoggedIn = true;
+                $rootScope.isLoggedIn = true;
                 $(".modal-backdrop").remove();
                 $location.path('/features');
             }, function (err) {

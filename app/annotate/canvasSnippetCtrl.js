@@ -2,8 +2,8 @@ app.controller("canvasCtrl", function ($scope, $log, $routeParams, $location, us
 
     // size of drawing and its starting background colour
     const drawingInfo = {
-        width: 384,
-        height: 420,
+        width: 344,
+        height: 640,
         bgColor: "white",
     }
     const brushSizes = [1, 2, 3, 4, 5, 6, 7, 8];
@@ -57,16 +57,9 @@ app.controller("canvasCtrl", function ($scope, $log, $routeParams, $location, us
         colorSel.appendChild(brush);
     })
 
-
     const canvas = document.getElementById("can");
     const mouse = createMouse().start(canvas, true);
     const ctx = canvas.getContext("2d");
-
-    // ctx.font="30px Comic Sans MS";
-    // ctx.fillStyle = "red";
-    // ctx.textAlign = "center";
-    // ctx.fillText("&xi;", 50, 50);
-    // ctx.fillText("test", canvas.width/2, canvas.height/2);
 
     var updateDisplay = true; // when true the display needs updating
     var ch, cw, w, h; // global canvas size vars
@@ -266,7 +259,7 @@ app.controller("canvasCtrl", function ($scope, $log, $routeParams, $location, us
             if (drawing && drawing.ctx) {
                 drawing.width = image.width;
                 drawing.height = image.height;
-                drawing.ctx.drawImage(image, 0, 0);
+                drawing.ctx.drawImage(image, 0, 40);
             }
         }
 

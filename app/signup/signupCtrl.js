@@ -11,4 +11,7 @@ app.controller("signupCtrl", function ($scope, user, $location, $log, $rootScope
                 console.log(err);
             })
     }
+    $('#registerModal1').on('shown.bs.modal', function() {
+        $(document).off('focusin.modal');
+    });
 });

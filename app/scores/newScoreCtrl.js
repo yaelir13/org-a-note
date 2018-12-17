@@ -10,6 +10,11 @@ app.controller("newScoreCtrl", function ($scope, userLibrary, $location, user, u
     $scope.createScore = function () {
         userLibrary.createScore($scope.title, $scope.composer,
             $scope.filepreview, $scope.movement, $scope.numPages).then(function () {
+                $scope.title = "";
+                $scope.composer = "";
+                $scope.filepreview = "";
+                $scope.movement = "";
+                $scope.numPages = "";
                 $('body').removeClass('modal-open');
                 $('.modal-backdrop').remove();
                 $location.path("/scores")
@@ -17,6 +22,10 @@ app.controller("newScoreCtrl", function ($scope, userLibrary, $location, user, u
                 console.log(err);
             })
     }
+
+    $('#newModal').on('shown.bs.modal', function () {
+        $(document).off('focusin.modal');
+    });
 
     $scope.$watch('file', function (newfile, oldfile) {
         if (angular.equals(newfile, oldfile)) {

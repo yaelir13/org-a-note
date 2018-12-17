@@ -89,40 +89,46 @@ app.factory("userLibrary", function ($q, $http, $log, user) {
             // for (key in scoresLibrary)
             //     ScoreId = scoresLibrary[userId][scoresLibrary[userId].length - 1].id;
             var lastArrItem = scoresLibrary[scoresLibrary.length - 1];
-            ScoreId = parseInt(lastArrItem.id)+1;
+            ScoreId = parseInt(lastArrItem.id) + 1;
             async.resolve(ScoreId);
         })
         return async.promise;
     }
+    var newScore={};
 
     function createScore(title, composer, score_img_path, Movement, numPages) {
         var async = $q.defer();
-        if (user.getActiveUser())
+        if (user.getActiveUser()){
             userId = user.getActiveUser().id;
-            getNextScoreId(userId).then(function (newScoreId) {
-            var newScore = new Score({
-                id: newScoreId, title: title, composer: composer,
-                score_img_path: score_img_path, Movement: Movement, numPages: numPages,
-                userId: userId
-            });
-
-            // if working with real server:
-            //$http.post("https://my-json-server.typicode.com/nirch/recipe-book-v3/recipes", newRecipe).then.....
-
+            $log.log(scoresLibrary);
+            if (!scoresLibrary) {
+                getNextScoreId(userId).then(function (newScoreId) {
+                    newScore = new Score({
+                        id: newScoreId, title: title, composer: composer,
+                        score_img_path: score_img_path, Movement: Movement, numPages: numPages,
+                        userId: userId
+                    });
+                })
+            }
+            else {
+                newScore = new Score({
+                    id: "0", title: title, composer: composer,
+                    score_img_path: score_img_path, Movement: Movement, numPages: numPages,
+                    userId: userId
+                });
+            }
             scoresLibrary[userId].push(newScore);
-            $log.log(scoresLibrary[userId]);
 
             async.resolve(newScore);
-        });
-
+        }
         return async.promise;
     }
 
-    return {
-        getActiveUserLibrary: getActiveUserLibrary,
-        createScore: createScore,
-        getIMSLPLibrary: getIMSLPLibrary,
-        getNextScoreId: getNextScoreId
-    }
+return {
+    getActiveUserLibrary: getActiveUserLibrary,
+    createScore: createScore,
+    getIMSLPLibrary: getIMSLPLibrary,
+    getNextScoreId: getNextScoreId
+}
 
 })

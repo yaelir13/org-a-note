@@ -13,8 +13,8 @@ app.config(function ($routeProvider) {
         }).when("/scores", {
             templateUrl: "app/scores/scoresLibrary.html",
             controller: "scoresLibraryCtrl"
-        }).when("/resources", {
-            templateUrl: "app/resources/resources.html",
+        }).when("/Resources", {
+            templateUrl: "app/Resources/resources.html",
             controller: "resourcesCtrl"
         }).when("/calendar", {
             templateUrl: "app/calendar/calendar.html",

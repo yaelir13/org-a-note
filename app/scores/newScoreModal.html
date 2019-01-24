@@ -8,36 +8,36 @@
                 </button>
             </div>
             <div class="modal-body">
-                <div class="container mt-1">
+                <div class="container ml-0 pl-0 mt-1">
                     <form>
-                        <div class="form-group row">
-                            <column class="form-group col-6 float-left">
+                        <div class="form-group ml-0 pl-0 row">
+                            <column class="form-group col-6 pl-0 float-left">
                                 <div class="form-group row mt-4">
-                                    <label for="title" class="col-sm-2 col-form-label">Title</label>
+                                    <label for="title" class="float-left col-sm-2 pl-0 col-form-label">Title</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="title" ng-model="title">
+                                        <input type="text" class="form-control" id="title" required autofocus ng-model="title">
                                     </div>
                                 </div>
-                                <div class="form-group row">
-                                    <label for="composer" class="col-sm-2 col-form-label">Composer</label>
+                                <div class="form-group mt-2 row">
+                                    <label for="composer" class="col-sm-2 pl-0 col-form-label">Composer</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="composer" ng-model="composer">
+                                        <input type="text" class="form-control" id="composer" required ng-model="composer">
                                     </div>
                                 </div>
-                                <div class="form-group row">
-                                    <label for="file" class="col-sm-4 col-form-label">Upload score</label>
+                                <div class="form-group mt-2 row">
+                                    <label for="file" class="col-sm-4 pl-0 col-form-label">Upload score</label>
                                     <div class="col-sm-8">
-                                        <input type="file" class="" fileinput="file" filepreview="filepreview" />
+                                        <input type="file" class="" required fileinput="file" filepreview="filepreview" />
                                     </div>
                                 </div>
-                                <div class="form-group row">
-                                    <label for="Movement" class="col-sm-4 col-form-label">Movement number</label>
+                                <div class="form-group mt-1 row">
+                                    <label for="movement" class="col-sm-4 pl-0 col-form-label">Movement number</label>
                                     <div class="col-sm-8">
-                                        <input type="number" class="form-control" id="Movement" ng-model="Movement">
+                                        <input type="number" class="form-control" id="movement" ng-model="movement">
                                     </div>
                                 </div>
-                                <div class="form-group row">
-                                    <label for="numPages" class="col-sm-4 col-form-label"># of pages</label>
+                                <div class="form-group mt-1 row">
+                                    <label for="numPages" class="col-sm-4 pl-0 col-form-label"># of pages</label>
                                     <div class="col-sm-8">
                                         <input type="number" class="form-control" id="numPages" ng-model="numPages">
                                     </div>
@@ -56,7 +56,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-info btn-block" data-dismiss="modal" ng-click="createScore()">Add
+                    <button type="button" class="btn btn-info btn-block" ng-click="createScore()">Add
                         score to library</button>
                 </div>
             </div>
